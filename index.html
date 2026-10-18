@@ -5,6 +5,7 @@
   </head>
   <input id="pattern" type="question">
   <input onClick="run()" type="submit">
+  <div id="ex"></div>
   <div id="container"></div>
   <script>
     // define variables
@@ -38,8 +39,10 @@
         validBoth(pattern);
       }
 
+      document.getElementById("ex").innerHTML = valid;
+
       // if pattern is valid animate it
-      if (type == "norm" && valid == true) {
+      if (type == "norm" && valid == true && false) {
         animateNorm(pattern);
       } else if (type == "sync") {
         animateSync(pattern);
