@@ -15,7 +15,7 @@ funciton animateNorm(pattern) {
   // how much x changes each time depending on the how high throw is 
   let change = [];
   change[1] = -17;
-  cahnge[3] = -5;
+  change[3] = -5;
   change[5] = -3;
   change[7] = -2;
   change[9] = -1.5;
