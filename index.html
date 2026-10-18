@@ -29,7 +29,9 @@
     function run() {
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
+      document.getElementById("ex").innerHTML = "type recognition did not work";
       type(pattern);
+      document.getElementById("ex").innerHTML = "type recognition works: type = " + type;
       // check if pattern is valid
       if (type == "norm" && valid == true) {
         validNorm(pattern);
