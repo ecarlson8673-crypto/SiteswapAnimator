@@ -1,5 +1,6 @@
 // check if a normal pattern is valid or not
 function validNorm(pattern) {
+  valid = true;
   // the position in the patter as the program loops through it
   let position = 0;
   // the height of balls in pattern as looping through
