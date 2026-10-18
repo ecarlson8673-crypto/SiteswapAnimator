@@ -12,6 +12,8 @@
     var valid = true;
     // what the pattern is
     var pattern = "";
+    // what type of patter is it options norm = vanilla, sync = syncronous, mult = multiplex, both = syncronous multiplex
+    var type = "";
     // to be continued
   </script>
   <script src="js/initialize.js" defer></script>
@@ -20,8 +22,7 @@
 //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
     // run after pattern is submitted\
     function run() {
-      // type options norm = vanilla, sync = syncronous, mult = multiplex, both = syncronous multiplex
-      let type = "";
+      pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
       type(type);
       // for testing purposes
