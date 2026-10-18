@@ -1,5 +1,5 @@
 // what type of pattern is it
-function type() {
+function type(pattern) {
   if (pattern.search(/[{}*&^%$#@!abcdefghijklmnopqrstuvwyz]/gi) > -1) {
     valid = false;
     document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used. Please try again.";
