@@ -15,7 +15,7 @@ function validNorm(pattern) {
     // every beat there should be one ball in hand
     let throwsInHand = 0;
     // check how many balls in hand that beat
-    for (let j = 0; j < i < j++) {
+    for (let j = 0; j < i; j++) {
       if (throws[j] == 0) {
         throwsInHand++;
       }
