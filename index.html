@@ -15,6 +15,7 @@
     // to be continued
   </script>
   <script src="js/initialize.js" defer></script>
+  <script src="js/validNorm.js" defer></script>
   <script>
 //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//
     // run after pattern is submitted\
@@ -23,17 +24,28 @@
       let type = "";
       // check what type of pattern it is
       type(type);
+      // for testing purposes
+      type = "norm";
       // check if pattern is valid
-      valid(type);
-      
       if (type == "norm") {
-        norm();
+        validNorm(pattern);
       } else if (type == "sync") {
-        sync();
+        validSync(pattern);
       } else if (type == "mult") {
-        mult();
+        validMult(pattern);
       } else if (type == "both") {
-        both();
+        validBoth(pattern);
+      }
+
+      // if pattern is valid animate it
+      if (type == "norm" && valid == true) {
+        animateNorm(pattern);
+      } else if (type == "sync") {
+        animateSync(pattern);
+      } else if (type == "mult") {
+        animateMult(pattern);
+      } else if (type == "both") {
+        animateBoth(pattern);
       }
     }
 
