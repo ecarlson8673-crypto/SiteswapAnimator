@@ -6,6 +6,7 @@
   <input id="pattern" type="question">
   <input onClick="run()" type="submit">
   <div id="ex"></div>
+  <div id="errorMessage"></div>
   <div id="container"></div>
   <script>
     // define variables
@@ -15,7 +16,6 @@
     var pattern = "test";
     // what type of patter is it options norm = vanilla, sync = syncronous, mult = multiplex, both = syncronous multiplex
     var type = "";
-    // to be continued
   </script>
   <script src="js/initialize.js" defer></script>
   <script src="js/validNorm.js" defer></script>
@@ -25,11 +25,11 @@
     function run() {
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
-      type(type, pattern);
+      type(type, pattern, valid);
       // for testing purposes
       type = "norm";
       // check if pattern is valid
-      if (type == "norm") {
+      if (type == "norm" && valid == true) {
         validNorm(pattern);
       } else if (type == "sync") {
         validSync(pattern);
