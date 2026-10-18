@@ -27,9 +27,10 @@
   <script>
     // run after pattern is submitted
     function run() {
+      document.getElementById("ex").innerHTML = "run started";
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
-      document.getElementById("ex").innerHTML = "type recognition did not work";
+      document.getElementById("ex").innerHTML = "type recognition did not work: pattern = " + pattern;
       type(pattern);
       document.getElementById("ex").innerHTML = "type recognition works: type = " + type;
       // check if pattern is valid
