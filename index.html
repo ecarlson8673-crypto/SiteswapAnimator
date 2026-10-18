@@ -16,10 +16,14 @@
     var pattern = "";
     // what type of patter is it options norm = vanilla, sync = syncronous, mult = multiplex, both = syncronous multiplex
     var type = "";
+    // dimension of screen
+    var screenWidth = 110;
+    var screenHeight = 160;
   </script>
   <script src="js/initialize.js" defer></script>
   <script src="js/type.js" defer></script>
   <script src="js/validNorm.js" defer></script>
+  <script src="js/animateNorm.js" defer></script>
   <script>
     // run after pattern is submitted
     function run() {
@@ -40,7 +44,7 @@
       document.getElementById("ex").innerHTML = valid;
 
       // if pattern is valid animate it
-      if (type == "norm" && valid == true && false) {
+      if (type == "norm" && valid == true) {
         animateNorm(pattern);
       } else if (type == "sync") {
         animateSync(pattern);
