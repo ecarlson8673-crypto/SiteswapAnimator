@@ -43,6 +43,10 @@
         }
       }
 
+      if (valid == false) {
+        document.getElementById("errorMessage").innerHTML = "Sorry this pattern is not posible.";
+      }
+
       // if pattern is valid animate it
       if (valid == true) {
         if (type == "norm") {
