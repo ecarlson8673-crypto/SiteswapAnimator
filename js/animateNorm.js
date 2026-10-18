@@ -1,5 +1,5 @@
 // animate a normal pattern if it is valid
-funciton animateNorm(pattern) {
+function animateNorm(pattern) {
   // posiiton in pattern
   let current = 0;
   // starting durrection of the ball
