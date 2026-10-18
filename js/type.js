@@ -1,4 +1,4 @@
 // what type of pattern is it
-function type(type) {
+function type(type, pattern) {
   
 }
