@@ -27,12 +27,9 @@
   <script>
     // run after pattern is submitted
     function run() {
-      document.getElementById("ex").innerHTML = "run started";
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
-      document.getElementById("ex").innerHTML = "type recognition did not work: pattern = " + pattern;
       type(pattern);
-      document.getElementById("ex").innerHTML = "type recognition works: type = " + type;
       // check if pattern is valid
       if (valid == true) {
         if (type == "norm") {
@@ -45,8 +42,6 @@
           validBoth(pattern);
         }
       }
-
-      document.getElementById("ex").innerHTML = valid;
 
       // if pattern is valid animate it
       if (valid == true) {
