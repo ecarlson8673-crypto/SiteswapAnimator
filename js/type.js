@@ -1,8 +1,8 @@
 // what type of pattern is it
-function type(type, pattern, valid, errorMessage) {
+function type(type, pattern, valid) {
   if (pattern.search(/[{}*&^%$#@!abcdefghijklmnopqrstuvwyz]/gi) > -1) {
     valid = false;
-    errorMessage = "An invalid symbol was used";
+    document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used. Please try again.";
   } else {
     if (pattern.search(/\D/g) == -1) {
       type = "norm;
