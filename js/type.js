@@ -5,7 +5,7 @@ function type(pattern) {
     document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used. Please try again.";
   } else {
     if (pattern.search(/\D/g) == -1) {
-      type = "norm;
+      type = "norm";
     } else if (pattern.search(/\(/) > -1) {
       type = "sync";
       if (pattern.search(/\[/) > -1) {
