@@ -10,7 +10,7 @@ function validNorm(pattern) {
   // run through pattern
   for (let i = 0; i < pattern.length * 10; i++) {
     // the current throw the pattern is testing
-    throws[i] = Number(pattern[posiiton]);
+    throws[i] = Number(pattern[position]);
 
     // every beat there should be one ball in hand
     let throwsInHand = 0;
