@@ -34,27 +34,31 @@
       type(pattern);
       document.getElementById("ex").innerHTML = "type recognition works: type = " + type;
       // check if pattern is valid
-      if (type == "norm" && valid == true) {
-        validNorm(pattern);
-      } else if (type == "sync") {
-        validSync(pattern);
-      } else if (type == "mult") {
-        validMult(pattern);
-      } else if (type == "both") {
-        validBoth(pattern);
+      if (valid == true) {
+        if (type == "norm") {
+          validNorm(pattern);
+        } else if (type == "sync") {
+          validSync(pattern);
+        } else if (type == "mult") {
+          validMult(pattern);
+        } else if (type == "both") {
+          validBoth(pattern);
+        }
       }
 
       document.getElementById("ex").innerHTML = valid;
 
       // if pattern is valid animate it
-      if (type == "norm" && valid == true) {
-        animateNorm(pattern);
-      } else if (type == "sync") {
-        animateSync(pattern);
-      } else if (type == "mult") {
-        animateMult(pattern);
-      } else if (type == "both") {
-        animateBoth(pattern);
+      if (valid == true) {
+        if (type == "norm") {
+          animateNorm(pattern);
+        } else if (type == "sync") {
+          animateSync(pattern);
+         } else if (type == "mult") {
+          animateMult(pattern);
+        } else if (type == "both") {
+          animateBoth(pattern);
+        }
       }
     }
   </script>
