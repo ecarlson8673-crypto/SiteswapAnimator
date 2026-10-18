@@ -12,7 +12,7 @@
     // whether the pattern is valid or not
     var valid = true;
     // what the pattern is
-    var pattern = "";
+    var pattern = "test";
     // what type of patter is it options norm = vanilla, sync = syncronous, mult = multiplex, both = syncronous multiplex
     var type = "";
     // to be continued
@@ -20,6 +20,7 @@
   <script src="js/initialize.js" defer></script>
   <script src="js/validNorm.js" defer></script>
   <script>
+    document.getElementById("ex").innerHTML = pattern;
     // run after pattern is submitted
     function run() {
       pattern = document.getElementById("pattern").value;
