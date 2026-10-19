@@ -23,9 +23,9 @@
 }
 #explanation {
   position: fixed;
-  left: 50px;
+  right: 150px;
 }
 #ideas {
   position: fixed;
-  left: 10px;
+  right: 10px;
 }
