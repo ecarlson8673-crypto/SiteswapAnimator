@@ -3,7 +3,7 @@ function animateSync(pattern) {
   // current position in pattern
   let current = 0;
   // which durection ball is going
-  let durection  = "L";
+  let durection = "L";
   // time of one frame in ms
   let time = 100;
   let startTime = new Date().getTime();
@@ -77,7 +77,7 @@ function animateSync(pattern) {
                 if (crossing == true) {
                   xChange[i + j] = changeX[toss];
                 } else {
-                  sChange[i + j] = change[toss];
+                  xChange[i + j] = change[toss];
                 }
               } else {
                 if (crossing == true) {
@@ -123,7 +123,7 @@ function animateSync(pattern) {
 
             // change color of current position
             let position = Math.round((y[i + j] * screenWidth) + x[i + j]);
-            if (!(position > screenWidth * screenHeight) {
+            if (!(position > screenWidth * screenHeight)) {
               document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             }
 
