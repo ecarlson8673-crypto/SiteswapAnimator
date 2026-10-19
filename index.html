@@ -6,6 +6,7 @@
   <div id="container"></div>
   <div id="ex"></div>
   <div id="errorMessage"></div>
+  <div id="cover"></div>
   <button id="explanation" onClick="explanation()">Siteswap Explained</button>
   <button id="ideas" onClick="ideas()">Ideas For Siteswaps</button>
   <input id="pattern" type="question" placeholder="What is your Siteswap?">
@@ -18,11 +19,12 @@
     var pattern = "";
     // what type of patter is it options norm = vanilla, sync = syncronous, mult = multiplex, both = syncronous multiplex
     var type = "";
-    // dimension of screen
+    // dimension of screen where siteswap is displayed
     var screenWidth = 110;
     var screenHeight = 160;
   </script>
   <script src="js/initialize.js" defer></script>
+  <script src="functionsForButtons.js"></script>
   <script src="js/type.js" defer></script>
   <script src="js/validNorm.js" defer></script>
   <script src="js/animateNorm.js" defer></script>
