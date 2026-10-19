@@ -12,3 +12,12 @@
   height: 5px;
   background-color: rgb(200, 200, 200);
 }
+/*cover every thing else when the explanation button or ideas button is clicked*/
+#cover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(75, 75, 75);
+}
