@@ -55,13 +55,13 @@ function animateSync(pattern) {
             let crossing = false;
             if (pattern.length > current + 1) {
               if (patterm[current + 1].toUpperCase() == "X") {
-                crossing == true;
+                crossing = true;
               }
             }
 
             // if toss is 0 then nothing happens
             if (toss == 0) {
-              x[i + j] == "blank";
+              x[i + j] = "blank";
             } else {
               // starting position of ball
               if (durection == "L") {
