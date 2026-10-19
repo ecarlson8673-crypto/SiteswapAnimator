@@ -16,7 +16,7 @@ function validSync(pattern) {
       // the current number being tested
       let number = Number(pattern[position]);
       if (pattern.length - 2 >= position) {
-        if (pattern[position + 1].toUppperCase() == "X") {
+        if (pattern[position + 1].toUpperCase() == "X") {
           if (j == 0) {
             handEquals((i + number), "L");
           } else {
