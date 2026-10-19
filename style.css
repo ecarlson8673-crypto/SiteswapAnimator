@@ -25,7 +25,19 @@
   position: fixed;
   right: 150px;
 }
+#explanationText {
+  color: rgb(200, 200, 200);
+  position: absolute;
+  left: 20%;
+  margin-right: 20%;
+}
 #ideas {
   position: fixed;
   right: 10px;
+}
+#ideasText {
+  color: rgb(200, 200, 200);
+  position: absolute;
+  left: 20%;
+  margin-left: 20%;
 }
