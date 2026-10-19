@@ -18,7 +18,7 @@
       explanationOpen = true;
       document.getElementById("cover").style.display = "";
     } else if (explanationOpen == true) {
-      ideasOpen = false;
+      explanationOpen = false;
       document.getElementById("cover").style.display = "none";
     }
   }
