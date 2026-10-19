@@ -3,4 +3,6 @@ function ideas() {
   
 }
 // instructions for how to siteswap works
-function 
+function explanation() {
+  
+}
