@@ -11,7 +11,7 @@ function validSync(pattern) {
   let hand = [];
 
   // check which hand balls are going to
-  for (let i = 0; i < pattern.length * 10; i++) {
+  for (let i = 0; i < pattern.length * 10; i += 2) {
     for (let j = 0; j < 2; j++) {
       // the current number being tested
       let number = Number(pattern[position]);
