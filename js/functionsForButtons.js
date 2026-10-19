@@ -10,9 +10,11 @@
     if (ideasOpen == false && explanationOpen == false) {
       ideasOpen = true;
       document.getElementById("cover").style.display = "";
+      document.getElementById("ideasText").style.display = "";
     } else if (ideasOpen == true) {
       ideasOpen = false;
       document.getElementById("cover").style.display = "none";
+      document.getElementById("ideasText").style.display = "none";
     }
   }
   // instructions for how to siteswap works
@@ -20,9 +22,11 @@
     if (explanationOpen == false && ideasOpen == false) {
       explanationOpen = true;
       document.getElementById("cover").style.display = "";
+      document.getElementById("explanationText").style.display = "";
     } else if (explanationOpen == true) {
       explanationOpen = false;
       document.getElementById("cover").style.display = "none";
+      document.getElementById("explanationText").style.display = "none";
     }
   }
 }
