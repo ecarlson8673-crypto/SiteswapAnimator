@@ -5,16 +5,20 @@
   // ideas for new juggling patterns to learn or try
   function ideas() {
     if (ideasOpen == false && explanationOpen == false) {
+      ideasOpen = true;
       document.getElementById("cover").style.display = "";
-    } else {
+    } else if (ideasOpen == true) {
+      ideasOpen = false;
       document.getElementById("cover").style.display = "none";
     }
   }
   // instructions for how to siteswap works
   function explanation() {
     if (explanationOpen == false && ideasOpen == false) {
+      explanationOpen = true;
       document.getElementById("cover").style.display = "";
-    } else {
+    } else if (explanationOpen == true) {
+      ideasOpen = false;
       document.getElementById("cover").style.display = "none";
     }
   }
