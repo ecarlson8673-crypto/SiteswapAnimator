@@ -1,5 +1,8 @@
 {
   document.getElementById("cover").style.display = "none";
+  document.getElementById("explanationText").style.display = "none";
+  document.getElementById("ideasText").style.display = "none";
+  // check if either page is open
   let ideasOpen = false;
   let explanationOpen = false;
   // ideas for new juggling patterns to learn or try
