@@ -115,7 +115,7 @@ function animateMult(pattern) {
 
             // if toss is  0 do nothing
             if (toss == 0) {
-              x[i + j] == "blank";
+              x[i + j] = "blank";
             } else {
               // start position of ball
               if (durection == "L") {
