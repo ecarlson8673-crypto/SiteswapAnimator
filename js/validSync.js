@@ -69,7 +69,7 @@ function validSync(pattern) {
   // check how many balls in hand each beat
   for (let i = 0; i < pattern.length * 10; i++) {
     // if current position is an X then move to next
-    if (pattern[current].toUpperCase() == "X") {
+    if (pattern[position].toUpperCase() == "X") {
       if (position >= pattern.length - 1) {
         position = 0;
       } else {
@@ -78,7 +78,7 @@ function validSync(pattern) {
     }
 
     // current number in pattern
-    let number = Number(pattern[current]);
+    let number = Number(pattern[position]);
     throws[i] = number;
 
     // increase position
