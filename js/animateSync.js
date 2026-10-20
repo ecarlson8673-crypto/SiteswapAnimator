@@ -71,7 +71,7 @@ function animateSync(pattern) {
                 x[i + j] = screenWidth - 35;
               }
 
-              y[i + j] = screenHeight - 35;
+              y[i + j] = screenHeight - 1;
 
               // amount ball needs to move in x and y durections
               if (durection == "L") {
