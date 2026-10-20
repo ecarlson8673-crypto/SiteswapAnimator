@@ -133,10 +133,11 @@ function animateSync(pattern) {
 
             // change acceleration of ball
             yChange[i + j] = yChange[i + j] - 1;
+          }
         }
       }
+      // increase the number of times this loop has looped
+      times++;
     }
-    // increase the number of times this loop has looped
-    times++;
   }
 }
