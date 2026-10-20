@@ -119,17 +119,17 @@ document.getElementById("errorMessage").innerHTML = "Got Here";
             if (!(lastPosition > screenWidth * screenHeight)) {
               document.getElementById(lastPosition).style.backgroundColor = `rgb(${200}, ${200}, ${200})`;
             }
-
+document.getElementById("errorMessage").innerHTML = "Got Here2";
             // change color of correct pixle
             let position = Math.round((y[i + j] * screenWidth) + x[i + j]);
             if (!(position > screenWidth * screenHeight)) {
               document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             }
-
+document.getElementById("errorMessage").innerHTML = "Got Here3";
             // change position of ball
             y[i + j] = y[i + j] - yChange[i + j];
             x[i + j] = x[i + j] - xChange[i + j];
-
+document.getElementById("errorMessage").innerHTML = "Got Here4";
             // change change to make acceleration
             yChange[i + j] = yChange[i + j] - 1;
           }
