@@ -22,7 +22,7 @@ function validMult(pattern) {
       let throwsInHand = 0;
       for (let j = 0; j < throws.length; j++) {
         if (throws[j] == 0) {
-          thowsInHand++;
+          throwsInHand++;
         }
         throws[j]--;
       }
