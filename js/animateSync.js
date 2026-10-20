@@ -54,7 +54,7 @@ function animateSync(pattern) {
             // check if pattern is crossing or not
             let crossing = false;
             if (pattern.length > current + 1) {
-              if (patterm[current + 1].toUpperCase() == "X") {
+              if (pattern[current + 1].toUpperCase() == "X") {
                 crossing = true;
               }
             }
