@@ -1,5 +1,6 @@
 // animate a syncronous pattern
 function animateSync(pattern) {
+  pattern = pattern.replaceAll("(", "").replaceAll(")", "").replaceAll(",", "");
   // current position in pattern
   let current = 0;
   // which durection ball is going
