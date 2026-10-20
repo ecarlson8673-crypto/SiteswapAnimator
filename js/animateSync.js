@@ -103,7 +103,7 @@ function animateSync(pattern) {
               if (current == pattern.length - 2) {
                 current = 0;
               } else {
-                current++;
+                current += 2;
               }
             } else {
               if (current == pattern.length - 1) {
