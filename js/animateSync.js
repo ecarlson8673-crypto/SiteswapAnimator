@@ -35,8 +35,8 @@ function animateSync(pattern) {
   let times = 0;
 
   // animate siteswap
-  setInterval(move, 2);
-  function move() {
+  setInterval(moveSync, 2);
+  function moveSync() {
     let currentTime = new Date().getTime();
     // check if it is time to move balls or not
     if (currentTime > startTime + time) {
