@@ -75,8 +75,8 @@ function animateMult(pattern) {
   let amountAdd = Number(pattern[current].length);
 
   // move
-  setInterval(move, 2);
-  function move() {
+  setInterval(moveMult, 2);
+  function moveMult() {
     let currentTime = new Date().getTime();
     // check if time is greater than time amount
     if (currentTime > startTime + time) {
