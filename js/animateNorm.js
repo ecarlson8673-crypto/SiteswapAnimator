@@ -33,8 +33,8 @@ function animateNorm(pattern) {
   let times = 0;
 
   // animate
-  setInterval(move, 2);
-  function move() {
+  setInterval(moveNorm, 2);
+  function moveNorm() {
     let currentTime = new Date().getTime();
     // check if current time is greater than start time
     if (currentTime > startTime + time) {
