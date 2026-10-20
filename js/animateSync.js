@@ -112,7 +112,7 @@ function animateSync(pattern) {
               }
             }
           }
-
+document.getElementById("errorMessage").innerHTML = "Got Here";
           if (x[i + j] != "blank") {
             // reset color of last position
             let lastPosition = Math.round(((y[i + j] + (yChange[i + j] + 1)) * screenWidth) + (x[i + j] + xChange[i + j]));
