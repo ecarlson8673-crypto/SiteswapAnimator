@@ -38,10 +38,10 @@
 #ideasText {
   color: rgb(200, 200, 200);
   position: absolute;
-  left: 20%;
+  left: 40%;
   margin-right: 20%;
   background-color: rgb(50, 50, 50);
-  border-width: 5px;
+  border-width: 50px;
   border-color: rgb(0, 0, 0);
   padding-left: 20px;
   padding-right: 20px;
