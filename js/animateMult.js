@@ -124,7 +124,7 @@ function animateMult(pattern) {
                 x[i + j] = screenWidth - 35;
               }
 
-              y[i + j = screenHeight - 1;
+              y[i + j] = screenHeight - 1;
 
               // amount ball moves
               if (durection == "L") {
