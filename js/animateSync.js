@@ -119,7 +119,7 @@ document.getElementById("errorMessage").innerHTML = "Got Here";
             let lastPosition = Math.round(((y[i + j] + (yChange[i + j] + 1)) * screenWidth) + (x[i + j] + xChange[i + j]));
 document.getElementById("errorMessage").innerHTML = "Got Here2";
             if (!(lastPosition > screenWidth * screenHeight)) {
-document.getElementById("errorMessage").innerHTML = "Got Here3 " + lastPosition;
+document.getElementById("errorMessage").innerHTML = "Got Here3 " + lastPosition + "  " + pattern;
               document.getElementById(lastPosition).style.backgroundColor = `rgb(${200}, ${200}, ${200})`;
             }
 document.getElementById("errorMessage").innerHTML = "Got Here4";
