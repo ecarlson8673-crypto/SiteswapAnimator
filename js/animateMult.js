@@ -153,7 +153,7 @@ function animateMult(pattern) {
 
             // change position of balls
             y[i + j] = y[i + j] - yChange[i + j];
-            x[i + j] = x[i + j] - yChange[i + j];
+            x[i + j] = x[i + j] - xChange[i + j];
 
             yChange[i + j] = yChange[i + j] - 1;
           }
