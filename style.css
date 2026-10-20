@@ -24,7 +24,7 @@
 #explanation {
   position: fixed;
   right: 150px;
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(200, 200, 200);
 }
 #explanationText {
   color: rgb(200, 200, 200);
@@ -42,7 +42,7 @@
 #ideas {
   position: fixed;
   right: 5px;
-  background-color: rgb(100, 100, 100);
+  background-color: rgb(200, 200, 200);
 }
 #ideasText {
   color: rgb(200, 200, 200);
