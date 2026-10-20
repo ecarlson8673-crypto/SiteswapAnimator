@@ -1,6 +1,5 @@
 // animate a syncronous pattern
 function animateSync(pattern) {
-  document.getElementById("errorMessage").innerHTML = "First Check";
   // current position in pattern
   let current = 0;
   // which durection ball is going
@@ -34,27 +33,21 @@ function animateSync(pattern) {
   // number of times move loop has happend
   let times = 0;
 
-  document.getElementById("errorMessage").innerHTML = "Second Check, after initialize variables";
   // animate siteswap
   setInterval(move, 2);
   function move() {
-    
-  document.getElementById("errorMessage").innerHTML = "Third Check, start of move function";
     let currentTime = new Date().getTime();
     // check if it is time to move balls or not
     if (currentTime > startTime + time) {
       // reset start time
       startTime = new Date().getTime();
 
-  document.getElementById("errorMessage").innerHTML = "fourth Check, after time check";
       // run through pattern and move balls
       for (let i = 0; i < (times / 4); i += 2) {
         if (i < (times / 4) - 9) {
           continue;
         }
         for (let j = 0; j < 2; j++) {
-          
-  document.getElementById("errorMessage").innerHTML = "Fifth Check, inside second for loop";
           if (x[i + j] == undefined) {
             // current toss
             let toss = Number(pattern[current]);
@@ -120,26 +113,24 @@ function animateSync(pattern) {
             }
           }
 
-  document.getElementById("errorMessage").innerHTML = "Sixth Check, after add ball";
-          // move balls while in air
-          if (x[j + i] != "blank") {
+          if (x[i + j] != "blank") {
             // reset color of last position
             let lastPosition = Math.round(((y[i + j] + (yChange[i + j] + 1)) * screenWidth) + (x[i + j] + xChange[i + j]));
             if (!(lastPosition > screenWidth * screenHeight)) {
               document.getElementById(lastPosition).style.backgroundColor = `rgb(${200}, ${200}, ${200})`;
             }
 
-            // change color of current position
+            // change color of correct pixle
             let position = Math.round((y[i + j] * screenWidth) + x[i + j]);
             if (!(position > screenWidth * screenHeight)) {
               document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             }
 
-            // change position of balls
+            // change position of ball
             y[i + j] = y[i + j] - yChange[i + j];
             x[i + j] = x[i + j] - xChange[i + j];
 
-            // change acceleration of ball
+            // change change to make acceleration
             yChange[i + j] = yChange[i + j] - 1;
           }
           
