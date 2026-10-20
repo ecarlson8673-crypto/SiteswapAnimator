@@ -113,33 +113,27 @@ function animateSync(pattern) {
               }
             }
           }
-document.getElementById("errorMessage").innerHTML = "Got Here";
+
           if (x[i + j] != "blank") {
             // reset color of last position
             let lastPosition = Math.round(((y[i + j] + (yChange[i + j] + 1)) * screenWidth) + (x[i + j] + xChange[i + j]));
-document.getElementById("errorMessage").innerHTML = "Got Here2";
             if (!(lastPosition > screenWidth * screenHeight)) {
-document.getElementById("errorMessage").innerHTML = "Got Here3 " + lastPosition + "  " + pattern;
               document.getElementById(lastPosition).style.backgroundColor = `rgb(${200}, ${200}, ${200})`;
             }
-document.getElementById("errorMessage").innerHTML = "Got Here4";
+
             // change color of correct pixle
             let position = Math.round((y[i + j] * screenWidth) + x[i + j]);
-document.getElementById("errorMessage").innerHTML = "Got Here5";
             if (!(position > screenWidth * screenHeight)) {
-document.getElementById("errorMessage").innerHTML = "Got Here6";
               document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             }
-document.getElementById("errorMessage").innerHTML = "Got Here7";
+
             // change position of ball
             y[i + j] = y[i + j] - yChange[i + j];
             x[i + j] = x[i + j] - xChange[i + j];
-document.getElementById("errorMessage").innerHTML = "Got Here8";
+
             // change change to make acceleration
             yChange[i + j] = yChange[i + j] - 1;
           }
-          
-  document.getElementById("errorMessage").innerHTML = "Seventh Check, after move ball code";
         }
       }
       // increase the number of times this loop has looped
