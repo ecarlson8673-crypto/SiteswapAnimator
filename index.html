@@ -10,26 +10,59 @@
     <h3>What Is Siteswap Notation</h3>
     <p>Siteswap notation is a way of representing juggling patterns using numbers and symbols.</p>
     <h3>How Siteswap Notation Works</h3>
-    <p>Every single siteswap can be imagined as an infinite repeating string of numbers. For</p>
-    <h3>Examples</h3>
+    <p>Every single siteswap can be imagined as an infinite repeating string of numbers. But, because the string of numbers 
+       repeats, it can be compressed to a way shorter string of number. For example 531 is actually 531531531 ect. But 
+       because it repeats we just say 531. When this program animates a pattern it runs through the pattern like this, 
+       pretending it is an infinite string of numbers.<br>
+       The numbers in a siteswap represent different throws. Odd throws cross to the other side while even throws stay in the 
+       same hand. The numbers also represent how many beats that throw is in the air for, each beat one ball is thrown. For 
+       example, in the siteswap 5 each ball is thrown so that it stays in the air for 5 beats. Because each ball is staying 
+       in the air for 5 beats and one ball is thrown each beat this is a 5 ball pattern. You can always calculate this by 
+       adding all the numbers in the siteswap together and dividing by the total number of numbers in the siteswap. For 
+       example, in the siteswap 531, 5 + 3 + 1 = 9 / 3 = 3 so this is a 3 ball pattern, in the siteswap 71, 7 + 1 = 8 / 2 = 4 
+       so this is a 4 ball pattern. This only works for regulare patterns, not synchronous, muliplex, or synchronous multiplex 
+       patterns.</p>
   </div>
   <div id="ideasText">
     <h1>List of Juggling Patterns</h1>
     <p><i>This is by no means a complete list of juggling patterns</i></p>
     <h4>Three ball patterns</h4>
-    <p>3</p><p>531</p><p>51</p><p>441</p><p>63141</p>
+        <p>3</p><p>531</p><p>51</p><p>441</p><p>63141</p>
+      <h6>Syncronous patterns</h6>
+      <h6>Multiplex patterns</h6>
+    
     <h4>Four ball patterns</h4>
-    <p>4</p><p>71</p><p>9151</p><p>62246</p><p>5551</p><p>55514</p>
+        <p>4</p><p>71</p><p>9151</p><p>62246</p><p>5551</p><p>55514</p><p>53</p><p>534</p>
+      <h6>Syncronous patterns</h6>
+        <p>(6x,4)(4,2x)(4,6x)(2x,4)</p><p>(6,4x)(2x,4)(4x,6)(4,2x)</p><p>(6x,4x)(2x,4x)(4x,6x)(4x,2x)</p>
+      <h6>Multiplex patterns</h6>
+    
     <h4>Five ball patterns</h4>
-    <p>5</p><p>91</p><p>645</p><p>744</p><p>753</p><p>66661</p><p>771</p>
+        <p>5</p><p>91</p><p>645</p><p>744</p><p>753</p><p>66661</p><p>771</p><p>73</p>
+      <h6>Syncronous patterns</h6>
+        <p>(6x,4)(4x,6)</p><p>(6x,4x)</p><p>(4x,6)(6,4x)</p>
+      <h6>Multiplex patterns</h6>
+    
     <h4>Six ball patterns</h4>
-    <p>6</p>
+        <p>6</p>
+      <h6>Syncronous patterns</h6>
+        <p>(8,4)(4,8)</p>
+      <h6>Multiplex patterns</h6>
+    
     <h4>Seven ball patterns</h4>
-    <p>7</p>
+        <p>7</p>
+      <h6>Syncronous patterns</h6>
+      <h6>Multiplex patterns</h6>
+    
     <h4>Eight ball patterns</h4>
-    <p>8</p>
+        <p>8</p>
+      <h6>Syncronous patterns</h6>
+      <h6>Multiplex patterns</h6>
+    
     <h4>Nine ball patterns</h4>
-    <p>9</p>
+        <p>9</p>
+      <h6>Syncronous patterns</h6>
+      <h6>Multiplex patterns</h6>
   </div>
   <button id="explanation" onClick="explanation()">Siteswap Explained</button>
   <button id="ideas" onClick="ideas()">Ideas For Siteswaps</button>
