@@ -31,7 +31,7 @@ function validBoth(pattern) {
 
   // current = which (), j = which x or y in (x,y), k = which x or y in ([xy], x) 
   // check if balls going to correct hands
-  for (let i = 0; i < pattern.length * 50; i += 2) {
+  for (let i = 0; i < pattern.length * 50; i++) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
         test = pattern[current][j][k] + "" + test;
