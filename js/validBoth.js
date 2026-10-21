@@ -34,9 +34,10 @@ function validBoth(pattern) {
   for (let i = 0; i < pattern.length * 50; i += 1) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
-        test = pattern[current][j][k] + "" + test;
+        test = test + "" + pattern[current][j][k];
         // if current position in pattern is an X then continue to next
         if (pattern[current][j][k].toUpperCase() == "X") {
+          test = test + "c";
           continue;
         }
         // current height of ball
