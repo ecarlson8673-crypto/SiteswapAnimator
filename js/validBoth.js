@@ -31,7 +31,7 @@ function validBoth(pattern) {
 
   // current = which (), j = which x or y in (x,y), k = which x or y in ([xy], x) 
   // check if balls going to correct hands
-  for (let i = 0; i < pattern.length * 50; i++) {
+  for (let i = 0; i < pattern.length * 50; i += 2) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
         test = pattern[current][j][k] + "" + test;
@@ -83,16 +83,31 @@ function validBoth(pattern) {
     }
   }
 
+  // reset current
+  current = 0;
+  
   // how many balls will land in each hand each beat
   for (let i = 0; i < pattern.length * 50; i += 2) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
-      
+        // if pattern is crossing then move to the next loop
+        if (pattern[current][j][k].toUpperCase() == "X") {
+          continue;
+        }
+
+        // check if pattern is crossing or not
+        let crossing = false;
+        if (pattern[current][j][k].length - 1 < k) {
+          if (pattern[current][j][k + 1].toUpperCase() == "X") {
+            crossing = false;
+          }
+        }
+        
       }
     }
 
     // increase position in pattern
-    if (pattern.length - 1 >= current) {
+    if (pattern.length - 1 <= current) {
       current = 0;
     } else {
       current++;
