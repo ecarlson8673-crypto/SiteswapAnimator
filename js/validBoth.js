@@ -42,15 +42,15 @@ function validBoth(pattern) {
       // if 0 ball from L
       if (j == 0) {
         if (crossing == true) {
-          hand[i] == undefined ? hand[i] = "R" : hand[i] = hand[i] + "R";
+          updateHand(i, "R");
         } else {
-          hand[i + 1] == undefined ? hand[i + 1] = "L" : hand[i + 1] = hand[i + 1] + "L";
+          updateHand((i + 1), "L");
         }
       } else {
         if (crossing == true) {
-          hand[i + 1] == undefined ? hand[i + 1] = "L" : hand[i + 1] = hand[i + 1] + "L";
+          updateHand((i + 1), "L");
         } else {
-          hand[i] == undefined ? hand[i] = "R" : hand[i] = hand[i] + "R";
+          updateHand(i, "R");
         }
       }
     }
@@ -60,6 +60,15 @@ function validBoth(pattern) {
       current = 0;
     } else {
       current++;
+    }
+  }
+
+  // assyn hand a value of "R" or "L"
+  function updateHand(i, durection) {
+    if (hand[i] == undefined) {
+      hand[i] = durection;
+    } else {
+      hand[i] = hand[i] + durection;
     }
   }
   document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern;
