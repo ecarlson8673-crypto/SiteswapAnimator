@@ -79,5 +79,5 @@ function validBoth(pattern) {
       hand[i] = hand[i] + durection;
     }
   }
-  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern;
+  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern[0] + " second: " + pattern[1];
 }
