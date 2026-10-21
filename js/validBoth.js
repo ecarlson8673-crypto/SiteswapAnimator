@@ -7,6 +7,7 @@ needs to do
 */
 function validBoth(pattern) {
   // example pattern to help me think (2,4)([4x4],2x)
+  // should be R,L,RR,L,R,L,RR,L
   // split pattern to make it easier to test it
   pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
   pattern = pattern.split("(");
@@ -31,11 +32,15 @@ function validBoth(pattern) {
   for (let i = 0; i < pattern.length * 50; i += 2) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
+        // if current position in pattern is an X then continue to next
+        if (pattern[current][j][k].toUpperCase() == "X") {
+          continue;
+        }
         // current height of ball
         let toss = Number(pattern[current][j][k]);
         // check if ball is crossing
         let crossing = false;
-        if (pattern[current][j].length - 1 > k) {
+        if (pattern[current][j][k].length - 1 > k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             crossing = true;
           }
@@ -56,13 +61,13 @@ function validBoth(pattern) {
           }
         }
       }
+    }
 
-      // increase position in pattern
-      if (pattern.length - 1 >= current) {
-        current = 0;
-      } else {
-        current++;
-      }
+    // increase position in pattern
+    if (pattern.length - 1 >= current) {
+      current = 0;
+    } else {
+      current++;
     }
   }
 
