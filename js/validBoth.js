@@ -26,40 +26,43 @@ function validBoth(pattern) {
   // which hands balls going to 1st = L, 2nd = R
   let hand = [];
 
+  // current = which (), j = which x or y in (x,y), k = which x or y in ([xy], x) 
   // check if balls going to correct hands
   for (let i = 0; i < pattern.length * 50; i += 2) {
     for (let j = 0; j < 2; j++) {
-      // current height of ball
-      let toss = Number(pattern[current][j]);
-      // check if ball is crossing
-      let crossing = false;
-      if (pattern[current].length - 1 > j) {
-        if (pattern[current][j + 1].toUpperCase() == "X") {
-          crossing = true;
+      for (let k = 0; k < pattern[current][j].length; k++) {
+        // current height of ball
+        let toss = Number(pattern[current][j]);
+        // check if ball is crossing
+        let crossing = false;
+        if (pattern[current].length - 1 > j) {
+          if (pattern[current][j + 1].toUpperCase() == "X") {
+            crossing = true;
+          }
+        }
+
+        // if 0 ball from L
+        if (j == 0) {
+          if (crossing == true) {
+            updateHand(i, "R");
+          } else {
+            updateHand((i + 1), "L");
+          }
+        } else {
+          if (crossing == true) {
+            updateHand((i + 1), "L");
+          } else {
+            updateHand(i, "R");
+          }
         }
       }
 
-      // if 0 ball from L
-      if (j == 0) {
-        if (crossing == true) {
-          updateHand(i, "R");
-        } else {
-          updateHand((i + 1), "L");
-        }
+      // increase position in pattern
+      if (pattern.length - 1 >= current) {
+        current = 0;
       } else {
-        if (crossing == true) {
-          updateHand((i + 1), "L");
-        } else {
-          updateHand(i, "R");
-        }
+        current++;
       }
-    }
-
-    // increase position in pattern
-    if (pattern.length - 1 >= current) {
-      current = 0;
-    } else {
-      current++;
     }
   }
 
