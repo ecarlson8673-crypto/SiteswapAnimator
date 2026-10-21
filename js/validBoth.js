@@ -51,11 +51,11 @@ function validBoth(pattern) {
           if (crossing == true) {
             updateHand((i + toss), "R");
           } else {
-            updateHand((i + toss), "L"); // had + 1
+            updateHand((i + toss + 1), "L");
           }
         } else {
           if (crossing == true) {
-            updateHand((i + toss), "L"); // had + 1
+            updateHand((i + toss + 1), "L");
           } else {
             updateHand((i + toss), "R");
           }
@@ -74,9 +74,25 @@ function validBoth(pattern) {
   // assyn hand a value of "R" or "L"
   function updateHand(i, durection) {
     if (hand[i] != "L" && hand[i] != "R") {
-      hand[i] = durection;
+      hand[i] = hand[i] + durection;
     } else {
       hand[i] = hand[i] + durection;
+    }
+  }
+
+  // how many balls will land in each hand each beat
+  for (let i = 0; i < pattern.length * 50; i += 2) {
+    for (let j = 0; j < 2; j++) {
+      for (let k = 0; k < pattern[current][j].length; k++) {
+      
+      }
+    }
+
+    // increase position in pattern
+    if (pattern.length - 1 >= current) {
+      current = 0;
+    } else {
+      current++;
     }
   }
   document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern[0] + " second: " + pattern[1];
