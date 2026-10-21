@@ -40,7 +40,7 @@ function validBoth(pattern) {
         let toss = Number(pattern[current][j][k]);
         // check if ball is crossing
         let crossing = false;
-        if (pattern[current][j][k].length - 1 > k) {
+        if (pattern[current][j][k].length - 1 < k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             crossing = true;
           }
@@ -51,11 +51,11 @@ function validBoth(pattern) {
           if (crossing == true) {
             updateHand((i + toss), "R");
           } else {
-            updateHand((i + toss + 1), "L");
+            updateHand((i + toss), "L"); // had + 1
           }
         } else {
           if (crossing == true) {
-            updateHand((i + toss + 1), "L");
+            updateHand((i + toss), "L"); // had + 1
           } else {
             updateHand((i + toss), "R");
           }
