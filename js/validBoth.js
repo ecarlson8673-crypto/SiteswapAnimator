@@ -67,7 +67,7 @@ function validBoth(pattern) {
     }
 
     // increase position in pattern
-    if (pattern.length - 1 >= current) {
+    if (pattern.length - 1 > current) {
       current = 0;
     } else {
       current++;
