@@ -37,7 +37,6 @@ function validBoth(pattern) {
         test = test + "" + pattern[current][j][k];
         // if current position in pattern is an X then continue to next
         if (pattern[current][j][k].toUpperCase() == "X") {
-          test = test + "c";
           continue;
         }
         // current height of ball
@@ -46,6 +45,7 @@ function validBoth(pattern) {
         let crossing = false;
         if (pattern[current][j][k].length - 2 >= k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
+            test = test + "c";
             crossing = true;
           }
         }
