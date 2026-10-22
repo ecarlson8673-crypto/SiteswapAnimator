@@ -26,6 +26,8 @@ function validBoth(pattern) {
   let current = 0;
   // which hands balls going to 1st = L, 2nd = R
   let hand = [];
+  // predict where balls need to go to match against where they actually go they should match
+  let predictHand = [];
 
   let test = "";
 
