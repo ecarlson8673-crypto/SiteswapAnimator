@@ -54,15 +54,15 @@ function validBoth(pattern) {
         // if 0 ball from L
         if (j == 0) {
           if (crossing == true) {
-            updateHand((i + toss), "R");
+            updateHand((i + j + toss), "R");
           } else {
-            updateHand((i + toss), "L");
+            updateHand((i + j + toss), "L");
           }
         } else {
           if (crossing == true) {
-            updateHand((i + toss), "L");
+            updateHand((i + j + toss), "L");
           } else {
-            updateHand((i + toss), "R");
+            updateHand((i + j + toss), "R");
           }
         }
       }
