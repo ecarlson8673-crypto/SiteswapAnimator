@@ -56,7 +56,7 @@ function validBoth(pattern) {
           if (crossing == true) {
             updateHand((i + toss), "R");
           } else {
-            updateHand((i + toss ), "L");
+            updateHand((i + toss), "L");
           }
         } else {
           if (crossing == true) {
@@ -79,7 +79,7 @@ function validBoth(pattern) {
   // assyn hand a value of "R" or "L"
   function updateHand(i, durection) {
     if (hand[i] != "L" && hand[i] != "R") {
-      hand[i] = durection;
+      hand[i] = hand[i] + durection;
     } else {
       hand[i] = hand[i] + durection;
     }
