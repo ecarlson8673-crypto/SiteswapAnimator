@@ -66,11 +66,11 @@ function validBoth(pattern) {
           if (crossing == true) {
             updateHand((i + toss), "R");
           } else {
-            updateHand((i + toss + 1), "L");
+            updateHand((i + toss), "L");
           }
         } else {
           if (crossing == true) {
-            updateHand((i + toss + 1), "L");
+            updateHand((i + toss), "L");
           } else {
             updateHand((i + toss), "R");
           }
