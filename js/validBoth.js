@@ -42,8 +42,18 @@ function validBoth(pattern) {
         // current height of ball
         let toss = Number(pattern[current][j][k]);
         // check if ball is crossing
+
+        /*
+          22x
+          012
+          position = 1
+          1-1 = 0
+          0 > 1
+          2-1 = 1
+          1 > 2
+        */
         let crossing = false;
-        if (pattern[current][j][k].length - 2 >= k) {
+        if (pattern[current][j][k].length - 1 > k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             test = test + "c";
             crossing = true;
