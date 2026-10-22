@@ -34,7 +34,7 @@ function validBoth(pattern) {
   for (let i = 0; i < pattern.length * 50; i += 1) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
-        //test = test + "" + pattern[current][j][k];
+        test = test + "" + pattern[current][j][k];
         // if current position in pattern is an X then continue to next
         if (pattern[current][j][k].toUpperCase() == "X") {
           continue;
@@ -44,11 +44,9 @@ function validBoth(pattern) {
         // check if ball is crossing
 
         let crossing = false;
-        test = test + " | " + pattern[current][j].length;
         if (pattern[current][j].length - 1 > k) {
-          //test = test + "in";
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
-            //test = test + "c";
+            test = test + "c";
             crossing = true;
           }
         }
@@ -56,15 +54,15 @@ function validBoth(pattern) {
         // if 0 ball from L
         if (j == 0) {
           if (crossing == true) {
-            updateHand((i + toss), "L");
-          } else {
             updateHand((i + toss), "R");
+          } else {
+            updateHand((i + toss), "L");
           }
         } else {
           if (crossing == true) {
-            updateHand((i + toss), "R");
-          } else {
             updateHand((i + toss), "L");
+          } else {
+            updateHand((i + toss), "R");
           }
         }
       }
