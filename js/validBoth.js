@@ -43,16 +43,9 @@ function validBoth(pattern) {
         let toss = Number(pattern[current][j][k]);
         // check if ball is crossing
 
-        /*
-          22x
-          012
-          position = 1
-          3-1 = 2
-          2 > 1
-          2 > 2
-        */
         let crossing = false;
         if (pattern[current][j][k].length - 1 > k) {
+          test = test + "in";
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             test = test + "c";
             crossing = true;
