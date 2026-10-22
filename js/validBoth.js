@@ -53,12 +53,12 @@ function validBoth(pattern) {
           1 >= 2
         */
         let crossing = false;
-        if (pattern[current][j][k].length - 2 >= k) {
+        //if (pattern[current][j][k].length - 2 >= k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             test = test + "c";
             crossing = true;
           }
-        }
+        //}
 
         // if 0 ball from L
         if (j == 0) {
