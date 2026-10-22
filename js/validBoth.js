@@ -70,9 +70,9 @@ function validBoth(pattern) {
           }
         } else {
           if (crossing == true) {
-            updateHand((i + toss + 1), "L");
+            updateHand((i + toss), "L");
           } else {
-            updateHand((i + toss + 1), "R");
+            updateHand((i + toss), "R");
           }
         }
       }
