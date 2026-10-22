@@ -44,6 +44,7 @@ function validBoth(pattern) {
         // check if ball is crossing
 
         let crossing = false;
+        // REMOVE K
         test = test + " | " + pattern[current][j][k].length;
         if (pattern[current][j][k].length - 1 > k) {
           //test = test + "in";
