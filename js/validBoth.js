@@ -47,18 +47,17 @@ function validBoth(pattern) {
           22x
           012
           position = 1
-          3-2 = 1
-          1 >= 1
-          3-2 = 1
-          1 >= 2
+          3-1 = 2
+          2 > 1
+          2 > 2
         */
         let crossing = false;
-        //if (pattern[current][j][k].length - 2 >= k) {
+        if (pattern[current][j][k].length - 1 > k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             test = test + "c";
             crossing = true;
           }
-        //}
+        }
 
         // if 0 ball from L
         if (j == 0) {
