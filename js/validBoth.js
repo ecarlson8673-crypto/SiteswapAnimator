@@ -78,8 +78,8 @@ function validBoth(pattern) {
 
   // assyn hand a value of "R" or "L"
   function updateHand(i, durection) {
-    if (hand[i] != "L" && hand[i] != "R") {
-      hand[i] = hand[i] + durection;
+    if (hand[i] == undefined) {
+      hand[i] = durection;
     } else {
       hand[i] = hand[i] + durection;
     }
