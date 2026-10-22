@@ -44,9 +44,8 @@ function validBoth(pattern) {
         // check if ball is crossing
 
         let crossing = false;
-        // REMOVE K
-        test = test + " | " + pattern[current][j][k].length;
-        if (pattern[current][j][k].length - 1 > k) {
+        test = test + " | " + pattern[current][j].length;
+        if (pattern[current][j].length - 1 > k) {
           //test = test + "in";
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
             //test = test + "c";
