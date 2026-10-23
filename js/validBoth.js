@@ -120,7 +120,7 @@ function validBoth(pattern) {
       }
     }
     // check if actual and predicted are the same
-    if (RActual != RPredicted || LActual != LPredicted) {
+    if (RActual != RPredict || LActual != LPredict) {
       valid = false;
     }
   }
