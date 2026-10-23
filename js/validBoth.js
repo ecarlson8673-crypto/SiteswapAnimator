@@ -121,9 +121,9 @@ function validBoth(pattern) {
         LPredict++;
       }
       // number of R and L in actual
-      if (hand[i][j] == "R") {
+      if (hand[i + 9][j] == "R") {
         RActual++;
-      } else if (hand[i][j] == "L") {
+      } else if (hand[i + 9][j] == "L") {
         LActual++;
       }
     }
