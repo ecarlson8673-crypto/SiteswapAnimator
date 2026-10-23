@@ -57,22 +57,23 @@ function validBoth(pattern) {
         let crossing = false;
         if (pattern[current][j].length - 1 > k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
-            crossing = true;
-          }
-        }
-
-        // if 0 ball from L
-        if (j == 0) {
-          if (crossing == true) {
-            updateHand((i + toss), "R");
+            if (j == 0) {
+              updateHand((i + toss), "L");
+            } else {
+              updateHand((i + toss), "R");
+            }
           } else {
-            updateHand((i + toss), "L");
+            if (j == 0) {
+              updateHand((i + toss), "R");
+            } else {
+              updateHand((i + toss), "L");
+            }
           }
         } else {
-          if (crossing == true) {
-            updateHand((i + toss), "L");
-          } else {
+          if (j == 0) {
             updateHand((i + toss), "R");
+          } else {
+            updateHand((i + toss), "L");
           }
         }
       }
