@@ -106,7 +106,6 @@
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
       type(pattern);
-      document.getElementById("ex").innerHTML = type;
       // check if pattern is valid
       if (valid == true) {
         if (type == "norm") {
@@ -119,7 +118,6 @@
           validBoth(pattern);
         }
       }
-      document.getElementById("ex").innerHTML = valid;
 
       if (valid == false) {
         document.getElementById("errorMessage").innerHTML = "Sorry this pattern is not posible.<br>Please reload and try again.";
