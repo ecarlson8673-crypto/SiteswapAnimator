@@ -24,16 +24,20 @@ function validBoth(pattern) {
   let throws = [];
   // current position in pattern
   let current = 0;
-  // which hands balls going to 1st = L, 2nd = R
+  // which hands balls going to should also be how many balls needed in that hand that beat
   let hand = [];
   // predict where balls need to go to match against where they actually go they should match
-  let predictHand = [];
+  let predictHand = "";
 
   // predict where balls are going
-  for (let i = 0; i < pattern.length * 50; i += 2) {
+  for (let i = 0; i < pattern.length; i++) {
     for (let j = 0; j < 2; j++) {
-      for (let k = 0; k < pattern[current][j].length; k++) {
-        
+      for (let k = 0; k < pattern[i][j].length; k++) {
+        if (j == 0) {
+          predictHand = predictHand + "L";
+        } else {
+          predictHand = predictHand + "R";
+        }
       }
     }
   }
@@ -126,5 +130,5 @@ function validBoth(pattern) {
       current++;
     }
   }
-  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern + "<br>" + test;
+  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand;
 }
