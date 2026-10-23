@@ -107,7 +107,7 @@ function validBoth(pattern) {
   }
 
   // compare predicted from actual to see if pattern is posible
-  for (let i = 0; i < predictHand.length; i++) {
+  /*for (let i = 0; i < predictHand.length; i++) {
     let RActual = 0;
     let LActual = 0;
     let RPredict = 0;
@@ -130,6 +130,6 @@ function validBoth(pattern) {
     if (RActual != RPredict || LActual != LPredict) {
       valid = false;
     }
-  }
+  }*/
   document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand + "<br>" + valid;
 }
