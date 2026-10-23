@@ -20,7 +20,7 @@ function validBoth(pattern) {
   let predictHand = [];
 
   // predict where balls are going
-  /*for (let i = 0; i < pattern.length; i++) {
+  for (let i = 0; i < pattern.length; i++) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[i][j].length; k++) {
         if (pattern[i][j][k].toUpperCase() != "X") {
@@ -40,7 +40,7 @@ function validBoth(pattern) {
         }
       }
     }
-  }*/
+  }
 
   let test = "";
 
