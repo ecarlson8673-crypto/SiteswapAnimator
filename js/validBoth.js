@@ -24,17 +24,18 @@ function validBoth(pattern) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[i][j].length; k++) {
         if (pattern[i][j][k].toUpperCase() != "X") {
-          let durection = "";
           if (j == 0) {
-            durection = "R";
+            if (predictHand[i] == undefined) {
+              predictHand[i] = "R";
+            } else {
+              predictHand[i] = predictHand[i] + "R";
+            }
           } else {
-            durection = "L";
-          }
-
-          if (predictHand[i] == undefined) {
-            predictHand[i] = durection;
-          } else {
-            predictHand[i] = predictHand[i] + durection;
+            if (predictHand[i] == undefined) {
+              predictHand[i] = "L";
+            } else {
+              predictHand[i] = predictHand[i] + "L";
+            }
           }
         }
       }
