@@ -103,7 +103,7 @@ function validBoth(pattern) {
   // remove all blank spaces from the hand code
   for (let i = 0; i < hand.length; i++) {
     if (hand[i] == undefined) {
-      hand[i].splice(i, 1);
+      hand.splice(i, 1);
     }
   }
 
