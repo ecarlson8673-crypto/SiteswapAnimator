@@ -132,5 +132,5 @@ function validBoth(pattern) {
       valid = false;
     }
   }
-  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand + "<br>" + valid;
+  document.getElementById("ex").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand + "<br>" + valid;
 }
