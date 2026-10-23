@@ -99,5 +99,30 @@ function validBoth(pattern) {
     }
   }
 
-  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand;
+  // compare predicted from actual to see if pattern is posible
+  for (let i = 0; i < predictHand.length; i++) {
+    let RActual = 0;
+    let LActual = 0;
+    let RPredict = 0;
+    let LPredict = 0;
+    for (let j = 0; j < predictHand[i].length; j++) {
+      // the number of R and L in predicted
+      if (predictHand[i][j] == "R") {
+        RPredict++;
+      } else if (predictHand[i][j] == "L") {
+        LPredict++;
+      }
+      // number of R and L in actual
+      if (hand[i][j] == "R") {
+        RActual++;
+      } else if (hand[i][j] == "L") {
+        LActual++;
+      }
+    }
+    // check if actual and predicted are the same
+    if (RActual != RPredicted || LActual != LPredicted) {
+      valid = false;
+    }
+  }
+  document.getElementById("errorMessage").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand + "<br>" + valid;
 }
