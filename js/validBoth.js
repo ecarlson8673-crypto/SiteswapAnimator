@@ -33,10 +33,12 @@ function validBoth(pattern) {
   for (let i = 0; i < pattern.length; i++) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[i][j].length; k++) {
-        if (j == 0) {
-          predictHand = predictHand + "L";
-        } else {
-          predictHand = predictHand + "R";
+        if (pattern[i][j][k].toUpperCase() != "X") {
+          if (j == 0) {
+            predictHand = predictHand + "L";
+          } else {
+            predictHand = predictHand + "R";
+          }
         }
       }
     }
