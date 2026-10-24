@@ -56,7 +56,7 @@ function animateBoth(pattern) {
     let currentTime = new Date().getTime();
     if (currentTime > startTime + time) {
       startTime = new Date().getTime();
-      if (times % 4 == 0) {
+      if (times % 8 == 0) {
         for (let j = 0; j < 2; j++) {
           for (let k = 0; k < pattern[current][j].length; k++) {
             // next open position in arrays for putting balls
