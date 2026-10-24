@@ -44,7 +44,7 @@ function animateBoth(pattern) {
   */
   
   // how long between frames
-  let time = 500;
+  let time = 100;
   let startTime = new Date().getTime();
 
   // how many times move interval has happend
