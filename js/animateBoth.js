@@ -44,7 +44,7 @@ function animateBoth(pattern) {
   */
   
   // how long between frames
-  let time = 100;
+  let time = 500;
   let startTime = new Date().getTime();
 
   // how many times move interval has happend
@@ -56,7 +56,7 @@ function animateBoth(pattern) {
     let currentTime = new Date().getTime();
     if (currentTime > startTime + time) {
       startTime = new Date().getTime();
-      for (let i = 0; i < (times / 4) / 2; i++) {
+      for (let i = 0; i < (times / 4); i++) {
         for (let j = 0; j < 2; j++) {
           for (let k = 0; k < pattern[current][j].length; k++) {
             // next open position in arrays for putting balls
