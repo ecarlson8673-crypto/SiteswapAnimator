@@ -130,9 +130,10 @@
           animateNorm(pattern);
         } else if (type == "sync") {
           animateSync(pattern);
-         } else if (type == "mult") {
+        } else if (type == "mult") {
           animateMult(pattern);
         } else if (type == "both") {
+          document.getElementById("temporaryText").innerHTML = "got to function";
           animateBoth(pattern);
         }
       }
