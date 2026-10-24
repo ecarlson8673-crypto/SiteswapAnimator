@@ -69,9 +69,10 @@ document.getElementById("ex").innerHTML = "check 0.3";
         for (let j = 0; j < 2; j++) {
           for (let k = 0; k < pattern[current][j].length; k++) {
 
-document.getElementById("ex").innerHTML = "check 1";
-
             test = test + ", " + pattern[current][j][k];
+
+            // next open position in arrays for putting balls
+            let position = x.length;
 
             // if current toss is a x then continue on to next iteration
             if (pattern[current][j][k].toUpperCase() == "X") {
@@ -89,41 +90,36 @@ document.getElementById("ex").innerHTML = "check 1";
               }
             }
 
-document.getElementById("ex").innerHTML = "check 2";
-            
             // add a new ball
             if (toss == 0) {
-              x[x.length] = "blank";
+              x[position] = "blank";
             } else {
               // starting position of balls
               if (j == 0) {
-                x[x.length] = 35;
+                x[position] = 35;
               } else {
-                x[x.length] = screenWidth - 35;
+                x[position] = screenWidth - 35;
               }
 
-              y[x.length] = screenHeight - 1;
+              y[position] = screenHeight - 1;
 
               // change in position
               if (j == 0) {
                 if (crossing == true) {
-                  xChange[x.length] = changeX[toss];
+                  xChange[position] = changeX[toss];
                 } else {
-                  xChange[x.length] = change[toss];
+                  xChange[position] = change[toss];
                 }
               } else {
                 if (crossing == true) {
-                  xChange[x.length] = changeX[toss] * -1;
+                  xChange[position] = changeX[toss] * -1;
                 } else {
-                  xChange[x.length] = change[toss] * -1;
+                  xChange[position] = change[toss] * -1;
                 }
               }
 
-              yChange[x.length] = (toss * 2) - 1;
+              yChange[position] = (toss * 2) - 1;
             }
-
-document.getElementById("ex").innerHTML = "check 3";
-            
           }
         }
 
