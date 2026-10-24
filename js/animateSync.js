@@ -103,7 +103,7 @@ function animateSync(pattern) {
             // reset color of last position
             let lastPosition = Math.round(((y[i + j] + (yChange[i + j] + 1)) * screenWidth) + (x[i + j] + xChange[i + j]));
             if (!(lastPosition > screenWidth * screenHeight)) {
-              document.getElementById(lastPosition).style.backgroundColor = `rgb(${200}, ${200}, ${200})`;
+              document.getElementById(lastPosition).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
             }
 
             // change color of correct pixle
