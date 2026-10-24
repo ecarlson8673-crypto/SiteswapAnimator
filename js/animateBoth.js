@@ -15,19 +15,6 @@ function animateBoth(pattern) {
   // how much balls change x and y
   let xChange = [];
   let yChange = [];
-
-  // amount ball changes in x durection
-  let change = [];
-  change[2] = 0;
-  change[4] = 1;
-  change[6] = 1;
-  change[8] = 1;
-
-  let changeX = []
-  changeX[2] = -7;
-  changeX[4] = -3;
-  changeX[6] = -2.5;
-  changeX[8] = -1.5;
   
   // position of balls
   let x = [];
@@ -43,8 +30,6 @@ function animateBoth(pattern) {
         k = which simbol of x or y in ()
   */
   
-  // how long between frames
-  let time = 100;
   let startTime = new Date().getTime();
 
   // how many times move interval has happend
