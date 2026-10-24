@@ -164,7 +164,7 @@ document.getElementById("ex").innerHTML = "check 4";
       }
       }
 
-document.getElementById("ex").innerHTML = "check 5" + test;
+document.getElementById("ex").innerHTML = "check 5" + x;
       
     }
   }
