@@ -10,7 +10,7 @@
 .pixle {
   width: 5px;
   height: 5px;
-  background-color: rgb(200, 200, 200);
+  background-color: rgba(255, 255, 255, 0);
 }
 /*cover every thing else when the explanation button or ideas button is clicked*/
 #cover {
