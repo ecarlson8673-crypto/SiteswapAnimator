@@ -1,7 +1,7 @@
 // animate a synchronous multiplex pattern
 function animateBoth(pattern) {
 
-document.getElementById("ex").innerHTML = "check 0.1";
+document.getElementById("temporaryText").innerHTML = "check 0.1";
   
   // split pattern to make it easier to test it
   pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
