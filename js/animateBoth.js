@@ -1,5 +1,8 @@
 // animate a synchronous multiplex pattern
 function animateBoth(pattern) {
+
+document.getElementById("ex").innerHTML = "check 0.1";
+  
   // split pattern to make it easier to test it
   pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
   pattern = pattern.split("(");
@@ -11,6 +14,8 @@ function animateBoth(pattern) {
   for (let i = 0; i < pattern.length; i++) {
     pattern[i] = pattern[i].split(",");
   }
+
+document.getElementById("ex").innerHTML = "check 0.2";
 
   // how much balls change x and y
   let xChange = [];
@@ -49,6 +54,8 @@ function animateBoth(pattern) {
 
   // how many times move interval has happend
   let times = 0;
+
+document.getElementById("ex").innerHTML = "check 0.3";
 
   // move
   setInterval(moveBoth, 2);
