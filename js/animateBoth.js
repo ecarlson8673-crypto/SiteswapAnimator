@@ -135,6 +135,7 @@ document.getElementById("ex").innerHTML = "check 3";
 
 document.getElementById("ex").innerHTML = "check 4";
 
+      if (times % 4 == 0) {
       for (let i = 0; i < x.length; i++) {
         // move balls while in air
         if (x[i] != "blank") {
@@ -157,6 +158,7 @@ document.getElementById("ex").innerHTML = "check 4";
           // change change to make acceleration
           yChange[i] = yChange[i] - 1;
         }
+      }
       }
 
 document.getElementById("ex").innerHTML = "check 5";
