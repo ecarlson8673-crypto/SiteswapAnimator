@@ -42,14 +42,11 @@ function validBoth(pattern) {
     }
   }
 
-  let test = "";
-
   // current = which (), j = which x or y in (x,y), k = which x or y in ([xy], x) 
   // check if balls going to correct hands
   for (let i = 0; i < pattern.length * 50; i += 2) {
     for (let j = 0; j < 2; j++) {
       for (let k = 0; k < pattern[current][j].length; k++) {
-        test = test + "" + pattern[current][j][k];
         // if current position in pattern is an X then continue to next
         if (pattern[current][j][k].toUpperCase() == "X") {
           continue;
@@ -132,5 +129,4 @@ function validBoth(pattern) {
       valid = false;
     }
   }
-  document.getElementById("ex").innerHTML = hand + "pattern : " + pattern + "<br>" + test + "<br>" + predictHand + "<br>" + valid;
 }
