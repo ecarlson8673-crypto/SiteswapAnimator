@@ -57,7 +57,7 @@ document.getElementById("ex").innerHTML = "check 0.2";
 
 document.getElementById("ex").innerHTML = "check 0.3";
 
-/*
+
   // move
   setInterval(moveBoth, 2);
   function moveBoth() {
@@ -125,7 +125,7 @@ document.getElementById("ex").innerHTML = "check 3";
         }
 
         // change position in pattern
-        if (pattern.length - 1 =< current) {
+        if (pattern.length - 1 <= current) {
           current = 0;
         } else {
           current++;
@@ -162,5 +162,5 @@ document.getElementById("ex").innerHTML = "check 4";
 document.getElementById("ex").innerHTML = "check 5";
       
     }
-  }*/
+  }
 }
