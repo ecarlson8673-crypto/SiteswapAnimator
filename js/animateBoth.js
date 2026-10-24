@@ -56,6 +56,7 @@ document.getElementById("ex").innerHTML = "check 0.2";
   let times = 0;
 
 document.getElementById("ex").innerHTML = "check 0.3";
+  let test = "";
 
 
   // move
@@ -69,7 +70,9 @@ document.getElementById("ex").innerHTML = "check 0.3";
           for (let k = 0; k < pattern[current][j].length; k++) {
 
 document.getElementById("ex").innerHTML = "check 1";
-            
+
+            test = test + "" + pattern[current][j][k];
+
             // if current toss is a x then continue on to next iteration
             if (pattern[current][j][k].toUpperCase() == "X") {
               continue;
@@ -161,7 +164,7 @@ document.getElementById("ex").innerHTML = "check 4";
       }
       }
 
-document.getElementById("ex").innerHTML = "check 5";
+document.getElementById("ex").innerHTML = "check 5" + test;
       
     }
   }
