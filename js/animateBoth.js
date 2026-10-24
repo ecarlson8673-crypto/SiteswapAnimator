@@ -56,7 +56,7 @@ function animateBoth(pattern) {
     let currentTime = new Date().getTime();
     if (currentTime > startTime + time) {
       startTime = new Date().getTime();
-      for (let i = 0; i < (times / 320); i++) {
+      for (let i = 0; i < (times / 4); i++) {
         for (let j = 0; j < 2; j++) {
           for (let k = 0; k < pattern[current][j].length; k++) {
             // next open position in arrays for putting balls
@@ -66,47 +66,50 @@ function animateBoth(pattern) {
             if (pattern[current][j][k].toUpperCase() == "X") {
               continue;
             }
-            
-            // get the current toss
-            let toss = Number(pattern[current][j][k]);
 
-            // check if this ball is crossing or not
-            let crossing = false;
-            if (pattern[current][j].length - 1 > k) {
-              if (pattern[current][j][k + 1].toUpperCase() == "X") {
-                crossing = true;
-              }
-            }
+            // check if this position has already been used
+            if (x[position] == undefined) {
+              // get the current toss
+              let toss = Number(pattern[current][j][k]);
 
-            // add a new ball
-            if (toss == 0) {
-              x[position] = "blank";
-            } else {
-              // starting position of balls
-              if (j == 0) {
-                x[position] = 35;
-              } else {
-                x[position] = screenWidth - 35;
-              }
-
-              y[position] = screenHeight - 1;
-
-              // change in position
-              if (j == 0) {
-                if (crossing == true) {
-                  xChange[position] = changeX[toss];
-                } else {
-                  xChange[position] = change[toss];
-                }
-              } else {
-                if (crossing == true) {
-                  xChange[position] = changeX[toss] * -1;
-                } else {
-                  xChange[position] = change[toss] * -1;
+              // check if this ball is crossing or not
+              let crossing = false;
+              if (pattern[current][j].length - 1 > k) {
+                if (pattern[current][j][k + 1].toUpperCase() == "X") {
+                  crossing = true;
                 }
               }
 
-              yChange[position] = (toss * 2) - 1;
+              // add a new ball
+              if (toss == 0) {
+                x[position] = "blank";
+              } else {
+                // starting position of balls
+                if (j == 0) {
+                  x[position] = 35;
+                } else {
+                  x[position] = screenWidth - 35;
+                }
+
+                y[position] = screenHeight - 1;
+
+                // change in position
+                if (j == 0) {
+                  if (crossing == true) {
+                    xChange[position] = changeX[toss];
+                  } else {
+                    xChange[position] = change[toss];
+                  }
+                } else {
+                  if (crossing == true) {
+                    xChange[position] = changeX[toss] * -1;
+                  } else {
+                    xChange[position] = change[toss] * -1;
+                  }
+                }
+
+                yChange[position] = (toss * 2) - 1;
+              }
             }
           }
         }
