@@ -59,6 +59,9 @@ function animateBoth(pattern) {
       for (let i = 0; i < (times / 4); i++) {
         for (let j = 0; j < 2; j++) {
           for (let k = 0; k < pattern[current][j].length; k++) {
+
+document.getElementById("ex").innerHTML = "check 1";
+            
             // if current toss is a x then continue on to next iteration
             if (pattern[current][j][k].toUpperCase() == "X") {
               continue;
@@ -75,6 +78,8 @@ function animateBoth(pattern) {
               }
             }
 
+document.getElementById("ex").innerHTML = "check 2";
+            
             // add a new ball
             if (toss == 0) {
               x[x.length] = "blank";
@@ -105,6 +110,9 @@ function animateBoth(pattern) {
 
               yChange[x.length] = (toss * 2) - 1;
             }
+
+document.getElementById("ex").innerHTML = "check 3";
+            
           }
         }
 
@@ -116,6 +124,8 @@ function animateBoth(pattern) {
         }
       }
       times++;
+
+document.getElementById("ex").innerHTML = "check 4";
 
       for (let i = 0; i < x.length; i++) {
         // move balls while in air
@@ -140,6 +150,9 @@ function animateBoth(pattern) {
           yChange[i] = yChange[i] - 1;
         }
       }
+
+document.getElementById("ex").innerHTML = "check 5";
+      
     }
   }
 }
