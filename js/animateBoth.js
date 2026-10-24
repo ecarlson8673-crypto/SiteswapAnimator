@@ -20,8 +20,6 @@ function animateBoth(pattern) {
   let x = [];
   let y = [];
 
-  // durection ball is going
-  let durection = "L";
   // position in pattern
   let current = 0;
   /* How Position Works
