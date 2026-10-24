@@ -1,8 +1,5 @@
 // animate a synchronous multiplex pattern
 function animateBoth(pattern) {
-
-document.getElementById("temporaryText").innerHTML = "check 0.1";
-  
   // split pattern to make it easier to test it
   pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
   pattern = pattern.split("(");
@@ -14,8 +11,6 @@ document.getElementById("temporaryText").innerHTML = "check 0.1";
   for (let i = 0; i < pattern.length; i++) {
     pattern[i] = pattern[i].split(",");
   }
-
-document.getElementById("ex").innerHTML = "check 0.2";
 
   // how much balls change x and y
   let xChange = [];
@@ -55,10 +50,6 @@ document.getElementById("ex").innerHTML = "check 0.2";
   // how many times move interval has happend
   let times = 0;
 
-document.getElementById("ex").innerHTML = "check 0.3";
-  let test = "start";
-
-
   // move
   setInterval(moveBoth, 2);
   function moveBoth() {
@@ -68,9 +59,6 @@ document.getElementById("ex").innerHTML = "check 0.3";
       for (let i = 0; i < (times / 4); i++) {
         for (let j = 0; j < 2; j++) {
           for (let k = 0; k < pattern[current][j].length; k++) {
-
-            test = test + ", " + pattern[current][j][k];
-
             // next open position in arrays for putting balls
             let position = x.length;
 
@@ -132,9 +120,6 @@ document.getElementById("ex").innerHTML = "check 0.3";
       }
       times++;
 
-document.getElementById("ex").innerHTML = "check 4";
-
-      if (times % 4 == 0) {
       for (let i = 0; i < x.length; i++) {
         // move balls while in air
         if (x[i] != "blank") {
@@ -158,10 +143,6 @@ document.getElementById("ex").innerHTML = "check 4";
           yChange[i] = yChange[i] - 1;
         }
       }
-      }
-
-document.getElementById("ex").innerHTML = "check 5";
-      
     }
   }
 }
