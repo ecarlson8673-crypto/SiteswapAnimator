@@ -4,26 +4,12 @@ function animateNorm(pattern) {
   let current = 0;
   // starting durrection of the ball
   let durection = "L";
-  // how often a frame is ms
-  let time = 100;
+
   let startTime = new Date().getTime();
 
   // position of ball
   let x = [];
   let y = [];
-
-  // how much x changes each time depending on the how high throw is 
-  let change = [];
-  change[1] = -17;
-  change[3] = -5;
-  change[5] = -3;
-  change[7] = -2;
-  change[9] = -1.5;
-
-  change[2] = 0;
-  change[4] = 1;
-  change[6] = 1;
-  change[8] = 1;
 
   // how much ball position is changing in y durection
   let xChange = [];
