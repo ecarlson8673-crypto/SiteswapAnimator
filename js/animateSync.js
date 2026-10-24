@@ -5,27 +5,12 @@ function animateSync(pattern) {
   let current = 0;
   // which durection ball is going
   let durection = "L";
-  // time of one frame in ms
-  let time = 100;
+
   let startTime = new Date().getTime();
 
   // ball position
   let x = [];
   let y = [];
-
-  // how much ball is changing in x durection
-  let change = [];
-  change[2] = 0;
-  change[4] = 1;
-  change[6] = 1;
-  change[8] = 1;
-
-  // if ball is crossing then change amount is different
-  let changeX = [];
-  changeX[2] = -7;
-  changeX[4] = -3;
-  changeX[6] = -2.5;
-  changeX[8] = -1.5;
 
   // ball position change amounts in x and y durections
   let xChange = [];
