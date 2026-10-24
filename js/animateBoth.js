@@ -4,7 +4,7 @@ function animateBoth(pattern) {
 document.getElementById("temporaryText").innerHTML = "check 0.1";
   
   // split pattern to make it easier to test it
-  /*pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
+  pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
   pattern = pattern.split("(");
   for (let i = 0; i < pattern.length; i++) {
     if (pattern[i] == "") {
@@ -46,7 +46,7 @@ document.getElementById("ex").innerHTML = "check 0.2";
         current = which of these () pattern is currently working with
         j = left or right hand, (x,y) in other words x or y
         k = which simbol of x or y in ()
-  *
+  */
   
   // how long between frames
   let time = 100;
@@ -57,6 +57,7 @@ document.getElementById("ex").innerHTML = "check 0.2";
 
 document.getElementById("ex").innerHTML = "check 0.3";
 
+/*
   // move
   setInterval(moveBoth, 2);
   function moveBoth() {
