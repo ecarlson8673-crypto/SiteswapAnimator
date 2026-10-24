@@ -56,7 +56,7 @@ document.getElementById("ex").innerHTML = "check 0.2";
   let times = 0;
 
 document.getElementById("ex").innerHTML = "check 0.3";
-  let test = "";
+  let test = "start";
 
 
   // move
@@ -71,7 +71,7 @@ document.getElementById("ex").innerHTML = "check 0.3";
 
 document.getElementById("ex").innerHTML = "check 1";
 
-            test = test + "" + pattern[current][j][k];
+            test = test + ", " + pattern[current][j][k];
 
             // if current toss is a x then continue on to next iteration
             if (pattern[current][j][k].toUpperCase() == "X") {
