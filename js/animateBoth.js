@@ -160,7 +160,7 @@ document.getElementById("ex").innerHTML = "check 4";
       }
       }
 
-document.getElementById("ex").innerHTML = "check 5" + x;
+document.getElementById("ex").innerHTML = "check 5";
       
     }
   }
