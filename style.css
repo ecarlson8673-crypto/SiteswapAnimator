@@ -74,5 +74,5 @@ h1, h2, h3, h4, h5, h6 {
 #svgContainer {
   position: absolute;
   left: calc(50% - 50px);
-  top: 900px;
+  top: 625px;
 }
