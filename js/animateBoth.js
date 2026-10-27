@@ -69,9 +69,9 @@ function animateBoth(pattern) {
               } else {
                 // starting position of balls
                 if (j == 0) {
-                  x[position] = 35;
+                  x[position] = 30;
                 } else {
-                  x[position] = screenWidth - 35;
+                  x[position] = screenWidth - 30;
                 }
 
                 y[position] = screenHeight - 1;
