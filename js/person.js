@@ -12,7 +12,7 @@ function person() {
       // four different positions of lower arm
       // catch, lower, throw, and middle
       // 0, 1, 2, 3
-      if (armPosiiton == 0) {
+      if (armPosition == 0) {
         document.getElementById("arm1").setAttribute("x2", `${70}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
         document.getElementById("arm2").setAttribute("x2", `${330}`);
