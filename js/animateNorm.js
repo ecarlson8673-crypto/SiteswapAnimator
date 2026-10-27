@@ -53,7 +53,7 @@ function animateNorm(pattern) {
             }
 
             // amount ball moves in y
-            yChange[i] = (toss * 4) - 1; // original = * 2
+            yChange[i] = (toss * 2) - 1;
           }
 
           // flip durection
