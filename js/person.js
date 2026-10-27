@@ -1,29 +1,37 @@
 // create a person to juggle the pattern
 function person() {
-  // code to create svg elements with js
-  {
-    let points = "0,0 0,0 0,0 0,0";
-    const body = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-    body.classList.add("polygon");
-    body.id = "body";
-    document.getElementById("svgContainer").appendChild(body);
-  }
-  {
-    const head = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-    head.classList.add("circle");
-    head.setAttribute("cx", "0");
-    head.setAttribute("cy", "0");
-    head.setAttribute("r", "0");
-    head.id = "head";
-    document.getElementById("svgContainer").appendChild(head);
-  }
-  for (let i = 0; i < 4; i++) {
-    const arm = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
-    arm.classList.add("arm");
-    arm.id = `arm${i}`;
-    document.getElementById("svgContainer").appendChild(arm);
-  }
-  
-  // create lines for arms here
-  // move them based on time
+  let startTime = new Date().getTime();
+
+  let armPosition = 2;
+  setInterval(movePerson, 2);
+  function movePerson() {
+    let currentTime = new Date().getTime();
+    if (startTime + (time / 2) < currentTime) {
+      startTime = new Date().getTime();
+
+      // four different positions of lower arm
+      // catch, lower, throw, and middle
+      // 0, 1, 2, 3
+      if (armPosiiton == 0) {
+        document.getElementById("arm1").setAttribute("x2", "");
+        document.getElementById("arm1").setAttribute("y2", "");
+        document.getElementById("arm2").setAttribute("x2", "");
+        document.getElementById("arm2").setAttribute("y2", "");
+      } else if (armPosition == 1) {
+        document.getElementById("arm1").setAttribute("x2", "");
+        document.getElementById("arm1").setAttribute("y2", "");
+        document.getElementById("arm2").setAttribute("x2", "");
+        document.getElementById("arm2").setAttribute("y2", "");
+      } else if (armPosition == 2) {
+        document.getElementById("arm1").setAttribute("x2", "");
+        document.getElementById("arm1").setAttribute("y2", "");
+        document.getElementById("arm2").setAttribute("x2", "");
+        document.getElementById("arm2").setAttribute("y2", "");
+      } else if (armPosition == 3) {
+        document.getElementById("arm1").setAttribute("x2", "");
+        document.getElementById("arm1").setAttribute("y2", "");
+        document.getElementById("arm2").setAttribute("x2", "");
+        document.getElementById("arm2").setAttribute("y2", "");
+      }
+    }
 }
