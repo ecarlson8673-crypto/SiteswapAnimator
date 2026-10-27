@@ -6,7 +6,7 @@ function person() {
   setInterval(movePerson, 2);
   function movePerson() {
     let currentTime = new Date().getTime();
-    if (startTime + (time / 2) < currentTime) {
+    if (startTime + (time) < currentTime) {
       startTime = new Date().getTime();
 
       // four different positions of lower arm
