@@ -147,17 +147,18 @@
     changeX[6] = -2.5;
     changeX[8] = -1.5;*/
   </script>
-  <script src="js/initialize.js" defer></script>
-  <script src="js/functionsForButtons.js" defer></script>
-  <script src="js/type.js" defer></script>
-  <script src="js/validNorm.js" defer></script>
-  <script src="js/animateNorm.js" defer></script>
-  <script src="js/validSync.js" defer></script>
-  <script src="js/animateSync.js" defer></script>
-  <script src="js/validMult.js" defer></script>
-  <script src="js/animateMult.js" defer></script>
+  <script src="js/initialize.js"></script>
+  <script src="js/functionsForButtons.js"></script>
+  <script src="js/type.js"></script>
+  <script src="js/validNorm.js"></script>
+  <script src="js/animateNorm.js"></script>
+  <script src="js/validSync.js"></script>
+  <script src="js/animateSync.js"></script>
+  <script src="js/validMult.js"></script>
+  <script src="js/animateMult.js"></script>
   <script src="js/validBoth.js"></script>
   <script src="js/animateBoth.js"></script>
+  <script src="js/person.js"></script>
   <script>
     // run after pattern is submitted
     function run() {
@@ -184,6 +185,7 @@
 
       // if pattern is valid animate it
       if (valid == true) {
+        person();
         if (type == "norm") {
           animateNorm(pattern);
         } else if (type == "sync") {
