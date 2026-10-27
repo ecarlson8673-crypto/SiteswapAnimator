@@ -16,7 +16,7 @@ function person() {
         document.getElementById("arm1").setAttribute("y2", `${250}`);
       } else if (armPosition1 == 1) {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
-        document.getElementById("arm1").setAttribute("y2", `${280}`);
+        document.getElementById("arm1").setAttribute("y2", `${265}`);
       } else if (armPosition1 == 2) {
         document.getElementById("arm1").setAttribute("x2", `${135}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
@@ -35,7 +35,7 @@ function person() {
         document.getElementById("arm2").setAttribute("y2", `${250}`);
       } else if (armPosition2 == 1) {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
-        document.getElementById("arm2").setAttribute("y2", `${280}`);
+        document.getElementById("arm2").setAttribute("y2", `${265}`);
       } else if (armPosition2 == 2) {
         document.getElementById("arm2").setAttribute("x2", `${265}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
