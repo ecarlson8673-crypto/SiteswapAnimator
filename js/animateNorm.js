@@ -38,9 +38,9 @@ function animateNorm(pattern) {
           } else {
             // start position of ball
             if (durection == "L") {
-              x[i] = 35;
+              x[i] = 30;
             } else {
-              x[i] = screenWidth - 35;
+              x[i] = screenWidth - 30;
             }
 
             y[i] = screenHeight - 1;
