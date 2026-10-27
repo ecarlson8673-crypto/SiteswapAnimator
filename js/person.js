@@ -2,7 +2,8 @@
 function person() {
   let startTime = new Date().getTime();
 
-  let armPosition = 2;
+  let armPosition1 = 2;
+  let armPosition2 = 0;
   setInterval(movePerson, 2);
   function movePerson() {
     let currentTime = new Date().getTime();
@@ -12,31 +13,43 @@ function person() {
       // four different positions of lower arm
       // catch, lower, throw, and middle
       // 0, 1, 2, 3
-      if (armPosition == 0) {
+      if (armPosition1 == 0) {
         document.getElementById("arm1").setAttribute("x2", `${70}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
-        document.getElementById("arm2").setAttribute("x2", `${265}`);
-        document.getElementById("arm2").setAttribute("y2", `${250}`);
-        armPosition = 1;
-      } else if (armPosition == 1) {
+      } else if (armPosition1 == 1) {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
         document.getElementById("arm1").setAttribute("y2", `${280}`);
-        document.getElementById("arm2").setAttribute("x2", `${295}`);
-        document.getElementById("arm2").setAttribute("y2", `${250}`);
-        armPosition = 2;
-      } else if (armPosition == 2) {
+      } else if (armPosition1 == 2) {
         document.getElementById("arm1").setAttribute("x2", `${135}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
-        document.getElementById("arm2").setAttribute("x2", `${330}`);
-        document.getElementById("arm2").setAttribute("y2", `${250}`);
-        armPosition = 3;
-      } else if (armPosition == 3) {
+      } else if (armPosition1 == 3) {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
+      } else if (armPosition1 > 3) {
+        if (armPosition1 == 6) {
+          armPosition1 = 0;
+        }
+      }
+      armPosition1++;
+
+      if (armPosition2 == 0) {
+        document.getElementById("arm2").setAttribute("x2", `${330}`);
+        document.getElementById("arm2").setAttribute("y2", `${250}`);
+      } else if (armPosition2 == 1) {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
         document.getElementById("arm2").setAttribute("y2", `${280}`);
-        armPosition = 0;
+      } else if (armPosition2 == 2) {
+        document.getElementById("arm2").setAttribute("x2", `${265}`);
+        document.getElementById("arm2").setAttribute("y2", `${250}`);
+      } else if (armPosition2 == 3) {
+        document.getElementById("arm2").setAttribute("x2", `${295}`);
+        document.getElementById("arm2").setAttribute("y2", `${250}`);
+      } else if (armPosition2 > 3) {
+        if (armPosition2 == 6) {
+          armPosition2 = 0;
+        }
       }
+      armPosition2++;
     }
   }
 }
