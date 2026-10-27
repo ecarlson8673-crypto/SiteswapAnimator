@@ -2,7 +2,7 @@
 function person() {
   let startTime = new Date().getTime();
 
-  let armPosition1 = 2;
+  let armPosition1 = 3;
   let armPosition2 = 0;
   setInterval(movePerson, 2);
   function movePerson() {
@@ -24,7 +24,7 @@ function person() {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
       } else if (armPosition1 > 3) {
-        if (armPosition1 == 10) {
+        if (armPosition1 == 5) {
           armPosition1 = -1;
         }
       }
@@ -43,7 +43,7 @@ function person() {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
       } else if (armPosition2 > 3) {
-        if (armPosition2 == 10) {
+        if (armPosition2 == 5) {
           armPosition2 = -1;
         }
       }
