@@ -38,4 +38,5 @@ function person() {
         armPosition = 0;
       }
     }
+  }
 }
