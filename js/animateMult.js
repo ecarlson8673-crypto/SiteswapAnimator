@@ -105,9 +105,9 @@ function animateMult(pattern) {
             } else {
               // start position of ball
               if (durection == "L") {
-                x[i + j] = 35;
+                x[i + j] = 30;
               } else {
-                x[i + j] = screenWidth - 35;
+                x[i + j] = screenWidth - 30;
               }
 
               y[i + j] = screenHeight - 1;
