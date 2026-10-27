@@ -7,7 +7,7 @@ function person() {
   setInterval(movePerson, 2);
   function movePerson() {
     let currentTime = new Date().getTime();
-    if (startTime + (time * 2) < currentTime) {
+    if (startTime + (time) < currentTime) {
       startTime = new Date().getTime();
 
       // four different positions of lower arm
@@ -24,7 +24,7 @@ function person() {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
       } else if (armPosition1 > 3) {
-        if (armPosition1 == 4) {
+        if (armPosition1 == 10) {
           armPosition1 = -1;
         }
       }
@@ -43,7 +43,7 @@ function person() {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
       } else if (armPosition2 > 3) {
-        if (armPosition2 == 4) {
+        if (armPosition2 == 10) {
           armPosition2 = -1;
         }
       }
