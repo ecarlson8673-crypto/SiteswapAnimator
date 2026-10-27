@@ -2,8 +2,8 @@
 function person() {
   let startTime = new Date().getTime();
 
-  let armPosition1 = 4;
-  let armPosition2 = 0;
+  let armPosition1 = 0;
+  let armPosition2 = 4;
   setInterval(movePerson, 2);
   function movePerson() {
     let currentTime = new Date().getTime();
