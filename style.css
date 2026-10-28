@@ -24,7 +24,6 @@
 #explanation {
   position: fixed;
   right: 5px;
-  background-color: rgb(200, 200, 200);
 }
 #explanationText {
   color: rgb(200, 200, 200);
@@ -43,7 +42,6 @@
   position: fixed;
   right: 5px;
   top: 35px;
-  background-color: rgb(200, 200, 200);
 }
 #ideasText {
   color: rgb(200, 200, 200);
@@ -62,7 +60,6 @@
   position: fixed;
   right: 5px;
   top: 63px;
-  background-color: rgb(200, 200, 200);
 }
 #settingsPage {
   color: rgb(200, 200, 200);
@@ -84,6 +81,9 @@ p {
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
+}
+button {
+  background-color: rgb(200, 200, 200);
 }
 #logo {
   position: fixed;
