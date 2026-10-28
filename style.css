@@ -65,7 +65,8 @@
   background-color: rgb(200, 200, 200);
 }
 settingsText {
-  color: rgb(200, 200, 200);
+  color: rgb(255, 255, 255);
+  background-color: rgb(50, 50, 50);
   position: absolute;
   left: 25%;
   top: 20%;
