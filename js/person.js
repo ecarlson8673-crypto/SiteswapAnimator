@@ -8,8 +8,8 @@ function person() {
     armPosition1 = 0;
     armPosition2 = 4;
   } else if (type == "mult") {
-    armPosition1 = 4;
-    armPosition2 = 0;
+    armPosition1 = 2;
+    armPosition2 = 6;
   } else if (type == "sync") {
     armPosition1 = 0;
     armPosition2 = 0;
