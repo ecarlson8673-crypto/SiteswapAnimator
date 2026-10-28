@@ -2,8 +2,21 @@
 function person() {
   let startTime = new Date().getTime();
 
-  let armPosition1 = 0;
-  let armPosition2 = 4;
+  let armPosition1;
+  let armPosition2;
+  if (type == "norm") {
+    armPosition1 = 0;
+    armPosition2 = 4;
+  } else if (type == "mult") {
+    armPosition1 = 4;
+    armPosition2 = 0;
+  } else if (type == "sync") {
+    armPosition1 = 0;
+    armPosition2 = 0;
+  } else if (type == "both") {
+    armPosition1 = 0;
+    armPosition2 = 0;
+  }
   setInterval(movePerson, 2);
   function movePerson() {
     let currentTime = new Date().getTime();
