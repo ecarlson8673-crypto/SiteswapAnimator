@@ -83,9 +83,9 @@
   
   // functions for settings buttons
   document.getElementById("speed").addEventListener("change", speedChange);
-  function speedChange(event) {
-    document.getElementById("speedValue") = event.target.value / 1000;
-    time = event.target.value;
+  function speedChange() {
+    document.getElementById("speedValue") = Number(document.getElementById("speed").value) / 1000;
+    time = Number(document.getElementById("speed").value);
   }
     
   function ballColor() {
