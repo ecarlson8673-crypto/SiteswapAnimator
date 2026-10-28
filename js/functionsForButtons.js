@@ -79,4 +79,12 @@
       document.getElementById("settings").innerHTML = "Settings";
     }
   }
+
+  
+  // functions for settings buttons
+  function ballColor() {
+  }
+
+  function personVisibility() {
+  }
 }
