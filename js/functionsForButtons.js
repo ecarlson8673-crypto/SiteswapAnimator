@@ -63,6 +63,7 @@
       // show settings
       document.getElementById("cover").style.display = "";
       document.getElementById("settingsDiv").style.display = "";
+      document.getElementById("settingsText").style.display = "";
       // hide other buttons
       document.getElementById("ideas").style.display = "none";
       document.getElementById("explanation").style.display = "none";
