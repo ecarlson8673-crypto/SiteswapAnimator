@@ -113,12 +113,18 @@ function animateBoth(pattern) {
           let lastPosition = Math.round(((y[i] + (yChange[i] + 1)) * screenWidth) + (x[i] + xChange[i]));
           if (!(lastPosition > screenWidth * screenHeight)) {
             document.getElementById(lastPosition).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
+            document.getElementById(lastPosition + 1).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
+            document.getElementById(lastPosition - screenWidth).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
+            document.getElementById(lastPosition - screenWidth + 1).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
           }
 
           // change color of correct pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
           if (!(position > screenWidth * screenHeight)) {
             document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+            document.getElementById(position + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+            document.getElementById(position - screenWidth).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+            document.getElementById(position - sreenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
           }
 
           // change position of ball
