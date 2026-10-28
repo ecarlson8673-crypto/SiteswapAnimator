@@ -64,6 +64,9 @@
   top: 65px;
   background-color: rgb(200, 200, 200);
 }
+settingsText {
+  color: rgb(200, 200, 200);
+}
 p {
   margin-bottom: 0px;
   margin-top: 0px;
