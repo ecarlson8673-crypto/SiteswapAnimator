@@ -83,8 +83,8 @@
   
   // functions for settings buttons
   document.getElementById("speed").oninput = function() {
-    document.getElementById("speedValue").innerHTML = this.value / 1000;
-    time = Number(this.value);
+    document.getElementById("speedValue").innerHTML = this.value / 10;
+    time = Number(this.value) / 10 * 100;
   }
     
   function ballColor() {
