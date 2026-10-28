@@ -11,7 +11,7 @@ function person() {
       startTime = new Date().getTime();
 
       // four different positions of lower arm
-      if (armPosition1 == 0) {
+      if (armPosition1 == 0 || armPosition == 6) {
         document.getElementById("arm1").setAttribute("x2", `${70}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
       } else if (armPosition1 == 1) {
@@ -23,14 +23,12 @@ function person() {
       } else if (armPosition1 == 3) {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
-      } else if (armPosition1 > 3) {
-        if (armPosition1 == 7) {
-          armPosition1 = -1;
-        }
+      } else if (armPosition1 == 7) {
+        armPosition1 = -1;
       }
       armPosition1++;
 
-      if (armPosition2 == 0) {
+      if (armPosition2 == 0 || armPosition2 == 6) {
         document.getElementById("arm2").setAttribute("x2", `${330}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
       } else if (armPosition2 == 1) {
@@ -42,10 +40,8 @@ function person() {
       } else if (armPosition2 == 3) {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
-      } else if (armPosition2 > 3) {
-        if (armPosition2 == 7) {
-          armPosition2 = -1;
-        }
+      } else if (armPosition2 == 7) {
+        armPosition2 = -1;
       }
       armPosition2++;
     }
