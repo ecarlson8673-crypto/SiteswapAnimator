@@ -14,8 +14,8 @@ function person() {
     armPosition1 = 0;
     armPosition2 = 0;
   } else if (type == "both") {
-    armPosition1 = 0;
-    armPosition2 = 0;
+    armPosition1 = 1;
+    armPosition2 = 1;
   }
   setInterval(movePerson, 2);
   function movePerson() {
