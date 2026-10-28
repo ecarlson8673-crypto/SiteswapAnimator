@@ -11,11 +11,11 @@ function person() {
     armPosition1 = 2;
     armPosition2 = 6;
   } else if (type == "sync") {
-    armPosition1 = 1;
-    armPosition2 = 1;
+    armPosition1 = 3;
+    armPosition2 = 3;
   } else if (type == "both") {
-    armPosition1 = 1;
-    armPosition2 = 1;
+    armPosition1 = 3;
+    armPosition2 = 3;
   }
   setInterval(movePerson, 2);
   function movePerson() {
