@@ -90,6 +90,14 @@
   function ballColor() {
   }
 
+  let personOn = true;
   function personVisibility() {
+    if (personOn == true) {
+      personOn = false;
+      document.getElementById("personVisibility").innerHTML = "Show person";
+    } else if (personOn == false) {
+      personOn = true;
+      document.getElementById("personVisibility").innerHTML = "Hide person";
+    }
   }
 }
