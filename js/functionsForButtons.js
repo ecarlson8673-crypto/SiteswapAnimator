@@ -7,6 +7,7 @@
   let ideasOpen = false;
   let explanationOpen = false;
   let settingsOpen = false;
+
   // ideas for new juggling patterns to learn or try
   function ideas() {
     if (ideasOpen == false && explanationOpen == false && settingsOpen == false) {
@@ -30,6 +31,7 @@
       document.getElementById("ideas").innerHTML = "Siteswaps";
     }
   }
+
   // instructions for how to siteswap works
   function explanation() {
     if (explanationOpen == false && ideasOpen == false && settingsOpen == false) {
@@ -53,6 +55,7 @@
       document.getElementById("explanation").innerHTML = "Siteswap Explained";
     }
   }
+
   // settings page
   function settings() {
     if (settingsOpen == false && ideasOpen == false && explanationOpen == false) {
