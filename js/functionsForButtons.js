@@ -2,7 +2,7 @@
   document.getElementById("cover").style.display = "none";
   document.getElementById("explanationText").style.display = "none";
   document.getElementById("ideasText").style.display = "none";
-  document.getElementById("settingsDiv").style.display = "none";
+  document.getElementById("settingsPage").style.display = "none";
   // check if either page is open
   let ideasOpen = false;
   let explanationOpen = false;
@@ -62,7 +62,7 @@
       settingsOpen = true;
       // show settings
       document.getElementById("cover").style.display = "";
-      document.getElementById("settingsDiv").style.display = "";
+      document.getElementById("settingsPage").style.display = "";
       document.getElementById("settingsText").style.display = "";
       // hide other buttons
       document.getElementById("ideas").style.display = "none";
@@ -73,7 +73,7 @@
       settingsOpen = false;
       // hide settings
       document.getElementById("cover").style.display = "none";
-      document.getElementById("settingsDiv").style.display = "none";
+      document.getElementById("settingsPage").style.display = "none";
       // reset buttons
       document.getElementById("ideas").style.display = "";
       document.getElementById("explanation").style.display = "";
