@@ -11,7 +11,7 @@ function person() {
       startTime = new Date().getTime();
 
       // four different positions of lower arm
-      if (armPosition1 == 0 || armPosition == 6) {
+      if (armPosition1 == 0 || armPosition1 == 6) {
         document.getElementById("arm1").setAttribute("x2", `${70}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
       } else if (armPosition1 == 1) {
