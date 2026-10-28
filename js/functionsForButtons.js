@@ -82,7 +82,7 @@
 
   
   // functions for settings buttons
-  document.getElementById("speed").addEventListener("change", speedChange);
+  document.getElementById("speed").addEventListener("input", speedChange);
   function speedChange() {
     document.getElementById("speedValue") = Number(document.getElementById("speed").value) / 1000;
     time = Number(document.getElementById("speed").value);
