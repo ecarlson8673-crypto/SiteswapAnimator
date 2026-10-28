@@ -104,12 +104,18 @@ function animateSync(pattern) {
             let lastPosition = Math.round(((y[i + j] + (yChange[i + j] + 1)) * screenWidth) + (x[i + j] + xChange[i + j]));
             if (!(lastPosition > screenWidth * screenHeight)) {
               document.getElementById(lastPosition).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
+              document.getElementById(lastPosition + 1).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
+              document.getElementById(lastPosition - screenWidth).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
+              document.getElementById(lastPosition - screenWidth + 1).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
             }
 
             // change color of correct pixle
             let position = Math.round((y[i + j] * screenWidth) + x[i + j]);
             if (!(position > screenWidth * screenHeight)) {
               document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+              document.getElementById(position + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+              document.getElementById(position - screenWidth).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+              document.getElementById(position - screenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             }
 
             // change position of ball
