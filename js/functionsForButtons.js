@@ -27,7 +27,7 @@
       document.getElementById("ideasText").style.display = "none";
       // change buttons back to original display
       document.getElementById("explanation").style.display = "";
-      ocument.getElementById("settings").style.display = "";
+      document.getElementById("settings").style.display = "";
       document.getElementById("ideas").innerHTML = "Siteswaps";
     }
   }
