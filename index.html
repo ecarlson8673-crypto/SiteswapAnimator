@@ -23,6 +23,11 @@
     <line x1="300" y1="230" x2="295" y2="250" stroke="rgba(0, 0, 0, 0.4)" stroke-width="16" id="arm2"></line>
   </svg>
   <div id="container"></div>
+  <input id="pattern" type="question" placeholder="What is your Siteswap?" style="position: fixed;">
+  <input onClick="run()" type="submit" style="position: fixed; left: 210px;">
+  <div id="ex"></div>
+  <div id="temporaryText" style="position: fixed; top: 30px;">Need ideas for siteswaps? Click the 'Siteswap' button on the right side of the screen.<br>To try another siteswap be sure to reload first.</div>
+  <div id="errorMessage" style="position: fixed; top: 65px;"></div>
   <div id="cover"></div>
   <div id="explanationText">
     <h1>Siteswap Notation Explained</h1>
@@ -96,11 +101,6 @@
   <button id="explanation" onClick="explanation()">Siteswap Explained</button>
   <button id="ideas" onClick="ideas()">Siteswaps</button>
   <button id="settings" onClick="settings()">Settings</button>
-  <input id="pattern" type="question" placeholder="What is your Siteswap?" style="position: fixed;">
-  <input onClick="run()" type="submit" style="position: fixed; left: 210px;">
-  <div id="ex"></div>
-  <div id="temporaryText" style="position: fixed; top: 30px;">Need ideas for siteswaps? Click the 'Siteswap' button on the right side of the screen.<br>To try another siteswap be sure to reload first.</div>
-  <div id="errorMessage" style="position: fixed; top: 65px;"></div>
   <script>
     // define variables
     // whether the pattern is valid or not
