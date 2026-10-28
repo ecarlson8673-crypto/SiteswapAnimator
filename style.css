@@ -66,6 +66,9 @@
 }
 settingsText {
   color: rgb(200, 200, 200);
+  position: absolute;
+  left: 25%;
+  top: 20%;
 }
 p {
   margin-bottom: 0px;
