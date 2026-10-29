@@ -19,7 +19,7 @@ function animateNorm(pattern) {
   let times = 0;
 
   // animate
-  setInterval(moveNorm, 2);
+  patternInterval = setInterval(moveNorm, 2);
   function moveNorm() {
     let currentTime = new Date().getTime();
     // check if current time is greater than start time
