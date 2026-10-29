@@ -60,5 +60,10 @@ function validMult(pattern) {
     } else {
       position++;
     }
+
+    // tell user pattern is not valid
+    if (valid == false) {
+      document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
+    }
   }
 }
