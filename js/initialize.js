@@ -19,5 +19,8 @@
     document.getElementById("arm1").setAttribute("y2", `${250}`);
     document.getElementById("arm2").setAttribute("x2", `${330}`);
     document.getElementById("arm2").setAttribute("y2", `${250}`);
+    // reset intervals
+    clearInterval(patternInterval);
+    clearInterval(personInterval);
   }
 }
