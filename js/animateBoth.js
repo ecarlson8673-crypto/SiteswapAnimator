@@ -121,10 +121,10 @@ function animateBoth(pattern) {
           // change color of correct pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
           if (!(position > screenWidth * screenHeight)) {
-            document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position - screenWidth).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position - screenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+            document.getElementById(position).style.backgroundColor = ballColor;
+            document.getElementById(position + 1).style.backgroundColor = ballColor;
+            document.getElementById(position - screenWidth).style.backgroundColor = ballColor;
+            document.getElementById(position - screenWidth + 1).style.backgroundColor = ballColor;
           }
 
           // change position of ball
