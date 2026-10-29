@@ -22,7 +22,10 @@ function animateNorm(pattern) {
   let colorOfBall = [];
 
   // next the next color
-  let nextColor = 0;
+  let nextColor = "";
+
+  // what is the next color to be applied
+  let colorPosition = 0;
 
   // animate
   patternInterval = setInterval(moveNorm, 2);
@@ -60,14 +63,6 @@ function animateNorm(pattern) {
 
             // amount ball moves in y
             yChange[i] = (toss * 2) - 1;
-
-            // the color of this ball
-            if (ballNumber - 1 == nextColor) {
-              nextColor = 0;
-            } else {
-              nextColor++;
-            }
-            colorOfBall[i + toss] = ballColor[nextColor];
           }
 
           // flip durection
@@ -97,9 +92,18 @@ function animateNorm(pattern) {
             
           }
 
+          // change color of balls, or keep them black
           let color = `rgb(${0}, ${0}, ${0})`;
-          if (multiColored == true && colorOfBall[i] != undefined) {
-            color = colorOfBall[i];
+          if (multiColored = true && nextColor != "none") {
+            colorOfBall[i] = nextColor;
+          }
+          if (multiColored == true && colorOfBall[i] == undefined) {
+            colorOfBall[i] = ballColor[colorPosition];
+            if (ballNumber - 1 == colorPosition) {
+              colorPosition = 0;
+            } else {
+              colorPosition++;
+            }
           }
           // change color of current pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
@@ -108,6 +112,9 @@ function animateNorm(pattern) {
             document.getElementById(position + 1).style.backgroundColor = color;
             document.getElementById(position - screenWidth).style.backgroundColor = color;
             document.getElementById(position - screenWidth + 1).style.backgroundColor = color;
+          } else if (x[i] != "done") {
+            nextColor = color;
+            x[i] = "done";
           }
 
           // change positions
@@ -120,6 +127,7 @@ function animateNorm(pattern) {
       }
       // change the number of times move has happend
       times++;
+      nextColor = "none";
     }
   }       
 }
