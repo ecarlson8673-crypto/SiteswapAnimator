@@ -99,7 +99,6 @@
     time = -1 * (Number(this.value) - 200);
   }
 
-  let multiColored = false;
   function ballColor() {
     if (multiColored == false) {
       multiColored = true;
