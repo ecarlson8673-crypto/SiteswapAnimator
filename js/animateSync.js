@@ -20,7 +20,7 @@ function animateSync(pattern) {
   let times = 0;
 
   // animate siteswap
-  setInterval(moveSync, 2);
+  patternInterval = setInterval(moveSync, 2);
   function moveSync() {
     let currentTime = new Date().getTime();
     // check if it is time to move balls or not
