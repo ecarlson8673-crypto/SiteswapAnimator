@@ -48,11 +48,19 @@ function numberOfBalls(pattern) {
     let total = 0;
     // number of throws
     let numberOfThrows = 0;
+    // check if pattern in mult or not
+    let inMult = false;
     for (let i = 0; i < pattern.length; i++) {
       if (pattern[i] == "[") {
+        inMult = true;
         numberOfThrows++;
-      } else if (pattern != "]") {
+      } else if (pattern == "]") {
+        inMult = false;
+      } else {
         total = total + Number(pattern[i]);
+        if (inMult == false) {
+          numberOfThrows++;
+        }
       }
     }
     ballNumber = total / numberOfThrows;
@@ -70,7 +78,7 @@ function numberOfBalls(pattern) {
       } else if (pattern[i] == "]") {
         inMult = false;
       }
-      if (typeof pattern[i] == "number") {
+      if (typeof Number(pattern[i]) == "number") {
         total = total + Number(pattern[i]);
         if (inMult == false) {
           length++;
