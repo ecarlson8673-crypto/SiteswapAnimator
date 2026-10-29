@@ -15,6 +15,11 @@ function validSync(pattern) {
     for (let j = 0; j < 2; j++) {
       // the current number being tested
       let number = Number(pattern[position]);
+      // if the number is odd pattern is not posible
+      if (number % 2 != 0) {
+        document.getElementById("errorMessage").innerHTML = "There can be no odd numbers in synchronous patterns.";
+        return;
+      }
       if (pattern.length - 2 >= position) {
         if (pattern[position + 1].toUpperCase() == "X") {
           if (j == 0) {
