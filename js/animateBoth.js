@@ -34,7 +34,7 @@ function animateBoth(pattern) {
   let times = 0;
 
   // move
-  setInterval(moveBoth, 2);
+  patternInterval = setInterval(moveBoth, 2);
   function moveBoth() {
     let currentTime = new Date().getTime();
     if (currentTime > startTime + time) {
