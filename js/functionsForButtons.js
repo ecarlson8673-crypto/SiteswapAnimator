@@ -99,26 +99,6 @@
     time = -1 * (Number(this.value) - 200);
   }
 
-  function ballColor() {
-    if (multiColored == false) {
-      multiColored = true;
-      document.getElementById("ballColor").innerHTML = "Single Colored";
-      // set colors
-      ballColor[0] = `rgb(${0}, ${0}, ${255})`;
-      ballColor[1] = `rgb(${0}, ${255}, ${0})`;
-      ballColor[2] = `rgb(${255}, ${0}, ${0})`;
-      ballColor[3] = `rgb(${255}, ${255}, ${0})`;
-      ballColor[4] = `rgb(${0}, ${255}, ${255})`;
-      ballColor[5] = `rgb(${255}, ${0}, ${255})`;
-      ballColor[6] = `rgb(${255}, ${130}, ${0})`;
-      ballColor[7] = `rgb(${200}, ${0}, ${255})`;
-      ballColor[8] = `rgb(${150}, ${200}, ${0})`;
-    } else if (multiColored == true) {
-      multiColored = false;
-      document.getElementById("ballColor").innerHTML = "Multicolored";
-    }
-  }
-
   let personOn = true;
   function personVisibility() {
     if (personOn == true) {
