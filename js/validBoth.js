@@ -129,4 +129,9 @@ function validBoth(pattern) {
       valid = false;
     }
   }
+
+  // tell user pattern is not valid
+  if (valid == false) {
+    document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
+  }
 }
