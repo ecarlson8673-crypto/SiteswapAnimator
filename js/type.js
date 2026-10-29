@@ -4,7 +4,7 @@ function patternType(pattern) {
   type = "";
   if (pattern.search(/[{}*&^%$#@!abcdefghijklmnopqrstuvwyz]/gi) > -1) {
     valid = false;
-    document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used. Please try again.";
+    document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used.";
   } else {
     if (pattern.search(/\D/g) == -1) {
       type = "norm";
@@ -16,7 +16,7 @@ function patternType(pattern) {
     } else if (pattern.search(/\[/) > -1 && pattern.search(/\]/) > -1) {
       type = "mult";
     } else {
-      document.getElementById("errorMessage").innerHTML = "Your pattern is not formatted correctly. Please try again.";
+      document.getElementById("errorMessage").innerHTML = "Your pattern is not formatted correctly.";
       valid = false;
     }
   }
