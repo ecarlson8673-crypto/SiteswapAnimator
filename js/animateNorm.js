@@ -83,15 +83,13 @@ function animateNorm(pattern) {
             
           }
 
-          // change color of balls, or keep them black
-          let color = `rgb(${0}, ${0}, ${0})`;
           // change color of current pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
           if (!(position > screenWidth * screenHeight)) {
-            document.getElementById(position).style.backgroundColor = color;
-            document.getElementById(position + 1).style.backgroundColor = color;
-            document.getElementById(position - screenWidth).style.backgroundColor = color;
-            document.getElementById(position - screenWidth + 1).style.backgroundColor = color;
+            document.getElementById(position).style.backgroundColor = ballColor;
+            document.getElementById(position + 1).style.backgroundColor = ballColor;
+            document.getElementById(position - screenWidth).style.backgroundColor = ballColor;
+            document.getElementById(position - screenWidth + 1).style.backgroundColor = ballColor;
           }
 
           // change positions
