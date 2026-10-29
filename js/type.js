@@ -2,6 +2,7 @@
 function patternType(pattern) {
   valid = true;
   type = "";
+  pattern.replaceAll(" ", "");
   if (pattern.search(/[{}*&^%$#@!abcdefghijklmnopqrstuvwyz]/gi) > -1) {
     valid = false;
     document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used.";
@@ -46,24 +47,24 @@ function numberOfBalls(pattern) {
   } else if (type == "mult") {
     // total number of all numbers added
     let total = 0;
-    // number of throws
-    let numberOfThrows = 0;
+    // number of numbers
+    let length = 0;
     // check if pattern in mult or not
     let inMult = false;
     for (let i = 0; i < pattern.length; i++) {
       if (pattern[i] == "[") {
         inMult = true;
-        numberOfThrows++;
+        length++;
       } else if (pattern == "]") {
         inMult = false;
       } else {
         total = total + Number(pattern[i]);
         if (inMult == false) {
-          numberOfThrows++;
+          length++;
         }
       }
     }
-    ballNumber = total / numberOfThrows;
+    ballNumber = total / length;
   } else if (type == "both") {
     // number of throws all added
     let total = 0;
@@ -78,7 +79,7 @@ function numberOfBalls(pattern) {
       } else if (pattern[i] == "]") {
         inMult = false;
       }
-      if (typeof Number(pattern[i]) == "number") {
+      if (Number(pattern[i]) != "NaN") {
         total = total + Number(pattern[i]);
         if (inMult == false) {
           length++;
