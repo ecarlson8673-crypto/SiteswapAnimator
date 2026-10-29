@@ -18,15 +18,6 @@ function animateNorm(pattern) {
   // number of times throw loop has been trigured
   let times = 0;
 
-  // color of balls
-  let colorOfBall = [];
-
-  // next the next color
-  let nextColor = "";
-
-  // what is the next color to be applied
-  let colorPosition = 0;
-
   // animate
   patternInterval = setInterval(moveNorm, 2);
   function moveNorm() {
@@ -94,17 +85,6 @@ function animateNorm(pattern) {
 
           // change color of balls, or keep them black
           let color = `rgb(${0}, ${0}, ${0})`;
-          if (multiColored = true && nextColor != "none") {
-            colorOfBall[i] = nextColor;
-          }
-          if (multiColored == true && colorOfBall[i] == undefined) {
-            colorOfBall[i] = ballColor[colorPosition];
-            if (ballNumber - 1 == colorPosition) {
-              colorPosition = 0;
-            } else {
-              colorPosition++;
-            }
-          }
           // change color of current pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
           if (!(position > screenWidth * screenHeight)) {
@@ -112,19 +92,14 @@ function animateNorm(pattern) {
             document.getElementById(position + 1).style.backgroundColor = color;
             document.getElementById(position - screenWidth).style.backgroundColor = color;
             document.getElementById(position - screenWidth + 1).style.backgroundColor = color;
-          } else if (x[i] != "blank") {
-            nextColor = color;
-            x[i] = "blank";
           }
 
-          if (x[i] != "blank") {
-            // change positions
-            y[i] = y[i] - yChange[i];
-            x[i] = x[i] - xChange[i];
+          // change positions
+          y[i] = y[i] - yChange[i];
+          x[i] = x[i] - xChange[i];
 
-            // change acceleration
-            yChange[i] = yChange[i] - 1;
-          }
+          // change acceleration
+          yChange[i] = yChange[i] - 1;
         }
       }
       // change the number of times move has happend
