@@ -1,5 +1,5 @@
 // what type of pattern is it
-function type(pattern) {
+function patternType(pattern) {
   valid = true;
   type = "";
   if (pattern.search(/[{}*&^%$#@!abcdefghijklmnopqrstuvwyz]/gi) > -1) {
