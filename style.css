@@ -95,3 +95,9 @@ button {
   left: calc(50% - 198px);
   top: 550px;
 }
+#errorMessage {
+  position: fixed;
+  top: 25%;
+  font-size: 30px;
+  left: 40%;
+}
