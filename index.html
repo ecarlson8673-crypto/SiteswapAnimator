@@ -170,8 +170,10 @@
       reset();
       // get pattern
       pattern = document.getElementById("pattern").value;
+      document.getElementById("ex").innerHTML = "got pattern";
       // check what type of pattern it is
       type(pattern);
+      document.getElementById("ex").innerHTML = "type works";
       // check if pattern is valid
       if (valid == true) {
         if (type == "norm") {
@@ -185,6 +187,7 @@
         }
       }
 
+      document.getElementById("ex").innerHTML = "check valid works";
       if (valid == false) {
         document.getElementById("errorMessage").innerHTML = "Sorry this pattern is not posible.<br>Please reload and try again.";
       }
