@@ -200,6 +200,7 @@
       }
 
       pattern = document.getElementById("pattern").value;
+      pattern = pattern.replaceAll(" ", "");
 
       // if pattern is valid animate it
       if (valid == true) {
