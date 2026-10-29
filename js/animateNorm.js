@@ -19,7 +19,10 @@ function animateNorm(pattern) {
   let times = 0;
 
   // color of balls
-  colorOfBall = [];
+  let colorOfBall = [];
+
+  // next the next color
+  let nextColor = 0;
 
   // animate
   patternInterval = setInterval(moveNorm, 2);
@@ -59,7 +62,12 @@ function animateNorm(pattern) {
             yChange[i] = (toss * 2) - 1;
 
             // the color of this ball
-            colorOfBall[i] = ballColor[current];
+            if (ballNumber - 1 == nextColor) {
+              nextColor = 0;
+            } else {
+              nextColor++;
+            }
+            colorOfBall[i] = ballColor[nextColor];
           }
 
           // flip durection
