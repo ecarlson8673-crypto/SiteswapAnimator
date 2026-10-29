@@ -62,7 +62,7 @@ function animateNorm(pattern) {
             yChange[i] = (toss * 2) - 1;
 
             // the color of this ball
-            if (ballNumber - 1 == nextColor) {
+            if (ballColor.length - 1 == nextColor) {
               nextColor = 0;
             } else {
               nextColor++;
