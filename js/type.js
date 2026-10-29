@@ -79,7 +79,7 @@ function numberOfBalls(pattern) {
       } else if (pattern[i] == "]") {
         inMult = false;
       }
-      if (pattern[i] != "(" && pattern[i] != ")" && pattern[i] != "[" && pattern[i] != "]" && pattern[i] != ",") {
+      if (pattern[i] != "(" && pattern[i] != ")" && pattern[i] != "[" && pattern[i] != "]" && pattern[i] != "," && pattern[i].toUpperCase() != "X") {
         total = total + "" + Number(pattern[i]);
         if (inMult == false) {
           length++;
