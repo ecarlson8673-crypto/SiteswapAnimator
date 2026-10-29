@@ -17,6 +17,7 @@ function type(pattern) {
       type = "mult";
     } else {
       document.getElementById("errorMessage").innerHTML = "Your pattern is not formatted correctly. Please try again.";
+      valid = false;
     }
   }
 }
