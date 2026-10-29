@@ -34,14 +34,49 @@ function numberOfBalls(pattern) {
   } else if (type == "sync") {
     // total of all numbers added
     let total = 0;
+    //length of numbers
+    let length = 0;
     for (let i = 0; i < pattern.length; i++) {
       if (pattern[i] != "(" && pattern[i] != ")" && pattern[i].toUpperCase() != "X") {
-        
+        total = total + Number(pattern[i]);
+        length++;
       }
     }
+    ballNumber = total / length;
   } else if (type == "mult") {
-    
+    // total number of all numbers added
+    let total = 0;
+    // number of throws
+    let numberOfThrows = 0;
+    for (let i = 0; i < pattern.length; i++) {
+      if (pattern[i] == "[") {
+        numberOfThrows++;
+      } else if (pattern != "]") {
+        total = total + Number(pattern[i]);
+      }
+    }
+    ballNumber = total / numberOfThrows;
   } else if (type == "both") {
-    
+    // number of throws all added
+    let total = 0;
+    // number of numbers
+    let length = 0;
+    // whether in multi or not
+    let inMult = false
+    for (let i = 0; i < pattern.length; i++) {
+      if (pattern[i] == "[") {
+        inMult = true;
+        length++;
+      } else if (pattern[i] == "]") {
+        inMult = false;
+      }
+      if (typeof pattern[i] == "number") {
+        total = total + Number(pattern[i]);
+        if (inMult == false) {
+          length++;
+        }
+      }
+    }
+    ballNumber = total / length;
   }
 }
