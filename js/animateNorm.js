@@ -97,13 +97,10 @@ function animateNorm(pattern) {
             
           }
 
-          let test = "";
           let color = `rgb(${0}, ${0}, ${0})`;
-          if (multiColored == true) {
+          if (multiColored == true && colorOfBall[i] != undefined) {
             color = colorOfBall[i];
-            test = test + "," + color;
           }
-          document.getElementById("ex").innerHTML = test;
           // change color of current pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
           if (!(position > screenWidth * screenHeight)) {
