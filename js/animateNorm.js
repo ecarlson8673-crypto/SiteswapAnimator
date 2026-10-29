@@ -67,7 +67,7 @@ function animateNorm(pattern) {
             } else {
               nextColor++;
             }
-            colorOfBall[i] = ballColor[nextColor];
+            colorOfBall[i + toss] = ballColor[nextColor];
           }
 
           // flip durection
