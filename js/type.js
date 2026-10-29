@@ -64,7 +64,8 @@ function numberOfBalls(pattern) {
         }
       }
     }
-    ballNumber = total / length;
+    //ballNumber = total / length;
+    ballNumber = total;
   } else if (type == "both") {
     // number of throws all added
     let total = 0;
@@ -86,6 +87,7 @@ function numberOfBalls(pattern) {
         }
       }
     }
-    ballNumber = total / length;
+    //ballNumber = total / length;
+    ballNumber = total;
   }
 }
