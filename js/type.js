@@ -80,13 +80,12 @@ function numberOfBalls(pattern) {
         inMult = false;
       }
       if (pattern[i] != "(" && pattern[i] != ")" && pattern[i] != "[" && pattern[i] != "]" && pattern[i] != "," && pattern[i].toUpperCase() != "X") {
-        total = total + "" + Number(pattern[i]);
+        total = total + Number(pattern[i]);
         if (inMult == false) {
           length++;
         }
       }
     }
-    //ballNumber = total / length;
-    ballNumber = total;
+    ballNumber = total / length;
   }
 }
