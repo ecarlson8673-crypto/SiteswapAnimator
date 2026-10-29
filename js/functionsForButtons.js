@@ -10,6 +10,10 @@
 
   // ideas for new juggling patterns to learn or try
   function ideas() {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
     if (ideasOpen == false && explanationOpen == false && settingsOpen == false) {
       ideasOpen = true;
       // show text
@@ -34,6 +38,10 @@
 
   // instructions for how to siteswap works
   function explanation() {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
     if (explanationOpen == false && ideasOpen == false && settingsOpen == false) {
       explanationOpen = true;
       // show text
@@ -58,6 +66,10 @@
 
   // settings page
   function settings() {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
     if (settingsOpen == false && ideasOpen == false && explanationOpen == false) {
       settingsOpen = true;
       // show settings
