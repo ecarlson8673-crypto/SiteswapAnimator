@@ -124,7 +124,7 @@ function animateBoth(pattern) {
             document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             document.getElementById(position + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
             document.getElementById(position - screenWidth).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position - sreenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+            document.getElementById(position - screenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
           }
 
           // change position of ball
