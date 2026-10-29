@@ -22,5 +22,7 @@
     // reset intervals
     clearInterval(patternInterval);
     clearInterval(personInterval);
+    // reset error message text
+    document.getElementById("errorMessage").innerHMTL = "";
   }
 }
