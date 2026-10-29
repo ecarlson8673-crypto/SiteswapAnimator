@@ -8,13 +8,15 @@ function type(pattern) {
   } else {
     if (pattern.search(/\D/g) == -1) {
       type = "norm";
-    } else if (pattern.search(/\(/) > -1) {
+    } else if (pattern.search(/\(/) > -1 && pattern.search(/\)/) > -1) {
       type = "sync";
-      if (pattern.search(/\[/) > -1) {
+      if (pattern.search(/\[/) > -1 && pattern.search(/\]/) > -1) {
         type = "both";
       }
-    } else if (pattern.search(/\[/) > -1) {
+    } else if (pattern.search(/\[/) > -1 && pattern.search(/\]/) > -1) {
       type = "mult";
+    } else {
+      document.getElementById("errorMessage").innerHTML = "Your pattern is not formated correctly. Please try again.";
     }
   }
 }
