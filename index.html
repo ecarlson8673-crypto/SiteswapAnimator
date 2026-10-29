@@ -120,8 +120,11 @@
     <button id="personVisibility" onClick="personVisibility()">Hide Person</button>
     <!-- change the color of balls, multi or black -->
     <div>Change the color of the balls</div>
+    <div>Red: <span id="redValue">0</span></div>
     <input type="range" id="red" min="0" max="255" value="0">
+    <div>Green: <span id="greenValue">0</span></div>
     <input type="range" id="green" min="0" max="255" value="0">
+    <div>Blue: <span id="blueValue">0</span></div>
     <input type="range" id="blue" min="0" max="255" value="0">
   </div>
   <button id="explanation" onClick="explanation()">Siteswap Explained</button>
@@ -162,7 +165,10 @@
     var patternInterval;
     var personInterval;
     // color of the balls
-    var ballColor = `rgb(${0}, ${0}, ${0})`
+    var ballColor = `rgb(${0}, ${0}, ${0})`;
+    var red = 0;
+    var green = 0;
+    var blue = 0;
     // number of balls
     var ballNumber = 0;
   </script>
