@@ -16,7 +16,7 @@ function type(pattern) {
     } else if (pattern.search(/\[/) > -1 && pattern.search(/\]/) > -1) {
       type = "mult";
     } else {
-      document.getElementById("errorMessage").innerHTML = "Your pattern is not formated correctly. Please try again.";
+      document.getElementById("errorMessage").innerHTML = "Your pattern is not formatted correctly. Please try again.";
     }
   }
 }
