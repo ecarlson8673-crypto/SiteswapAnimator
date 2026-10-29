@@ -18,6 +18,9 @@ function animateNorm(pattern) {
   // number of times throw loop has been trigured
   let times = 0;
 
+  // color of balls
+  colorOfBall = [];
+
   // animate
   patternInterval = setInterval(moveNorm, 2);
   function moveNorm() {
@@ -54,6 +57,9 @@ function animateNorm(pattern) {
 
             // amount ball moves in y
             yChange[i] = (toss * 2) - 1;
+
+            // the color of this ball
+            colorOfBall[i] = ballColor[current];
           }
 
           // flip durection
@@ -83,13 +89,17 @@ function animateNorm(pattern) {
             
           }
 
+          let color = `rgb(${0}, ${0}, ${0})`;
+          if (multiColored == true) {
+            color = colorOfBall[i];
+          }
           // change color of current pixle
           let position = Math.round((y[i] * screenWidth) + x[i]);
           if (!(position > screenWidth * screenHeight)) {
-            document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position - screenWidth).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-            document.getElementById(position - screenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+            document.getElementById(position).style.backgroundColor = color;
+            document.getElementById(position + 1).style.backgroundColor = color;
+            document.getElementById(position - screenWidth).style.backgroundColor = color;
+            document.getElementById(position - screenWidth + 1).style.backgroundColor = color;
           }
 
           // change positions
