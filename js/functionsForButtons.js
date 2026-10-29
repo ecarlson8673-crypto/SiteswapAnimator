@@ -102,13 +102,19 @@
 
   // rgb ball color sliders
   document.getElementById("red").oninput = function() {
-    //time = -1 * (Number(this.value) - 200);
+    red = this.value;
+    document.getElementById("redValue").innerHTML = this.value;
+    ballColor = `rgb(${red}, ${green}, ${blue})`;
   }
   document.getElementById("green").oninput = function() {
-    //time = -1 * (Number(this.value) - 200);
+    green = this.value;
+    document.getElementById("greenValue").innerHTML = this.value;
+    ballColor = `rgb(${red}, ${green}, ${blue})`;
   }
   document.getElementById("blue").oninput = function() {
-    //time = -1 * (Number(this.value) - 200);
+    blue = this.value;
+    document.getElementById("blueValue").innerHTML = this.value;
+    ballColor = `rgb(${red}, ${green}, ${blue})`;
   }
 
   let personOn = true;
