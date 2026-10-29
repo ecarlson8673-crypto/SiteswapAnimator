@@ -103,13 +103,13 @@
     change speed of pattern
     -->
     <!--speed of pattern-->
-    <p>Speed is at: <span id="speedValue">100</span>%</p>
+    <div>Speed is at: <span id="speedValue">100</span>%</div>
     <input type="range" id="speed" min="50" max="150" value="100">
     <!-- show person or not-->
-    <p><br></p>
+    <p></p>
     <button id="personVisibility" onClick="personVisibility()">Hide Person</button>
     <!-- change the color of balls, multi or black-->
-    <p><br></p>
+    <p></p>
     <button id="ballColor" onClick="ballColor()">Multicolored</button>
   </div>
   <button id="explanation" onClick="explanation()">Siteswap Explained</button>
@@ -166,9 +166,8 @@
   <script>
     // run after pattern is submitted
     function run() {
-      // if there are any past intervals clear them
-      clearInterval(patternInterval);
-      clearInterval(personInterval);
+      // if a pattern has already been tried reset
+      reset();
       // get pattern
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
