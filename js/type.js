@@ -55,17 +55,16 @@ function numberOfBalls(pattern) {
       if (pattern[i] == "[") {
         inMult = true;
         length++;
-      } else if (pattern == "]") {
+      } else if (pattern[i] == "]") {
         inMult = false;
       } else {
-        total = total + "" + Number(pattern[i]);
+        total = total + Number(pattern[i]);
         if (inMult == false) {
           length++;
         }
       }
     }
-    //ballNumber = total / length;
-    ballNumber = total;
+    ballNumber = total / length;
   } else if (type == "both") {
     // number of throws all added
     let total = 0;
