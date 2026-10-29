@@ -146,25 +146,10 @@
     changeX[4] = -2.5;
     changeX[6] = -1.75;
     changeX[8] = -1.25;
-    
-    /* Old width 110px in from side 35px
-    var change = [];
-    change[1] = -17;
-    change[3] = -5;
-    change[5] = -3;
-    change[7] = -2;
-    change[9] = -1.5;
 
-    change[2] = 0;
-    change[4] = 1;
-    change[6] = 0.75;
-    change[8] = 0.5;
-
-    let changeX = [];
-    changeX[2] = -7;
-    changeX[4] = -3;
-    changeX[6] = -2.5;
-    changeX[8] = -1.5;*/
+    // intervals so they can be reset
+    var patternInterval;
+    var personInterval;
   </script>
   <script src="js/initialize.js"></script>
   <script src="js/functionsForButtons.js"></script>
@@ -181,6 +166,10 @@
   <script>
     // run after pattern is submitted
     function run() {
+      // if there are any past intervals clear them
+      clearInterval(patternInterval);
+      clearInterval(personInterval);
+      // get pattern
       pattern = document.getElementById("pattern").value;
       // check what type of pattern it is
       type(pattern);
