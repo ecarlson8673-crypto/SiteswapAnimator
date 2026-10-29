@@ -98,8 +98,16 @@
     document.getElementById("speedValue").innerHTML = this.value;
     time = -1 * (Number(this.value) - 200);
   }
-    
+
+  let multiColored = false;
   function ballColor() {
+    if (multiColored == false) {
+      multiColored = true;
+      document.getElementById("ballColor").innerHTML = "Single Colored";
+    } else if (multiColored == true) {
+      multiColored = false;
+      document.getElementById("ballColor").innerHTML = "Multicolored";
+    }
   }
 
   let personOn = true;
@@ -107,9 +115,11 @@
     if (personOn == true) {
       personOn = false;
       document.getElementById("personVisibility").innerHTML = "Show person";
+      document.getElementById("svgContainer").style.display = "none";
     } else if (personOn == false) {
       personOn = true;
       document.getElementById("personVisibility").innerHTML = "Hide person";
+      document.getElementById("svgContainer").style.display = "";
     }
   }
 }
