@@ -112,9 +112,9 @@ function animateNorm(pattern) {
             document.getElementById(position + 1).style.backgroundColor = color;
             document.getElementById(position - screenWidth).style.backgroundColor = color;
             document.getElementById(position - screenWidth + 1).style.backgroundColor = color;
-          } else if (x[i] != "done") {
+          } else if (x[i] != "blank") {
             nextColor = color;
-            x[i] = "done";
+            x[i] = "blank";
           }
 
           // change positions
