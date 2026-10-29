@@ -53,8 +53,10 @@ function validBoth(pattern) {
         }
         // current height of ball
         let toss = Number(pattern[current][j][k]);
+        // check if toss is odd
+        if (toss % 2 != 0) {
+          document.getElementById("errorMessage").innerHTML = "There can be no odd numbers in a synchronous multiplex pattern."
         // check if ball is crossing
-
         let crossing = false;
         if (pattern[current][j].length - 1 > k) {
           if (pattern[current][j][k + 1].toUpperCase() == "X") {
