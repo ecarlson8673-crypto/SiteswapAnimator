@@ -2,7 +2,7 @@
 function patternType(pattern) {
   valid = true;
   type = "";
-  pattern.replaceAll(" ", "");
+  pattern = pattern.replaceAll(" ", "");
   if (pattern.search(/[{}*&^%$#@!abcdefghijklmnopqrstuvwyz]/gi) > -1) {
     valid = false;
     document.getElementById("errorMessage").innerHTML = "A symbol that can not be used was used.";
@@ -79,7 +79,7 @@ function numberOfBalls(pattern) {
       } else if (pattern[i] == "]") {
         inMult = false;
       }
-      if (Number(pattern[i]) != "NaN") {
+      if (pattern[i] != "(" && pattern[i] != ")" && pattern[i] != "[" && pattern[i] != "]" && pattern[i] != ",") {
         total = total + "" + Number(pattern[i]);
         if (inMult == false) {
           length++;
