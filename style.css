@@ -98,8 +98,8 @@ button {
 #errorMessage {
   position: fixed;
   top: 25%;
-  left: calc(50% - 50px);
+  left: calc(50% - 150px);
   font-size: 50px;
-  width: 100px;
+  width: 300px;
   height: 100px;
 }
