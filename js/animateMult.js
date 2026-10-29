@@ -137,10 +137,10 @@ function animateMult(pattern) {
             // change color of current position
             let position = Math.round((y[i + j] * screenWidth) + x[i + j]);
             if (!(position > screenWidth * screenHeight)) {
-              document.getElementById(position).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-              document.getElementById(position + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-              document.getElementById(position - screenWidth).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
-              document.getElementById(position - screenWidth + 1).style.backgroundColor = `rgb(${0}, ${0}, ${0})`;
+              document.getElementById(position).style.backgroundColor = ballColor;
+              document.getElementById(position + 1).style.backgroundColor = ballColor;
+              document.getElementById(position - screenWidth).style.backgroundColor = ballColor;
+              document.getElementById(position - screenWidth + 1).style.backgroundColor = ballColor;
             }
 
             // change position of balls
