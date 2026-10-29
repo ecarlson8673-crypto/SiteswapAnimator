@@ -15,9 +15,9 @@
       document.getElementById(i).style.backgroundColor = `rgba(${255}, ${255}, ${255}, ${0})`;
     }
     // reset person
-    document.getElementById("arm1").setAttribute("x2", `${70}`);
+    document.getElementById("arm1").setAttribute("x2", `${105}`);
     document.getElementById("arm1").setAttribute("y2", `${250}`);
-    document.getElementById("arm2").setAttribute("x2", `${330}`);
+    document.getElementById("arm2").setAttribute("x2", `${295}`);
     document.getElementById("arm2").setAttribute("y2", `${250}`);
     // reset intervals
     clearInterval(patternInterval);
