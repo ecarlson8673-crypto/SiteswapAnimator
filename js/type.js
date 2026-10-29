@@ -58,7 +58,7 @@ function numberOfBalls(pattern) {
       } else if (pattern == "]") {
         inMult = false;
       } else {
-        total = total + Number(pattern[i]);
+        total = total + "" + Number(pattern[i]);
         if (inMult == false) {
           length++;
         }
@@ -81,7 +81,7 @@ function numberOfBalls(pattern) {
         inMult = false;
       }
       if (Number(pattern[i]) != "NaN") {
-        total = total + Number(pattern[i]);
+        total = total + "" + Number(pattern[i]);
         if (inMult == false) {
           length++;
         }
