@@ -117,12 +117,14 @@ function animateNorm(pattern) {
             x[i] = "blank";
           }
 
-          // change positions
-          y[i] = y[i] - yChange[i];
-          x[i] = x[i] - xChange[i];
+          if (x[i] != "blank") {
+            // change positions
+            y[i] = y[i] - yChange[i];
+            x[i] = x[i] - xChange[i];
 
-          // change acceleration
-          yChange[i] = yChange[i] - 1;
+            // change acceleration
+            yChange[i] = yChange[i] - 1;
+          }
         }
       }
       // change the number of times move has happend
