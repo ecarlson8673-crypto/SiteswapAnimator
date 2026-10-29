@@ -94,9 +94,21 @@
 
   
   // functions for settings buttons
+  // speed of the pattern slider
   document.getElementById("speed").oninput = function() {
     document.getElementById("speedValue").innerHTML = this.value;
     time = -1 * (Number(this.value) - 200);
+  }
+
+  // rgb ball color sliders
+  document.getElementById("red").oninput = function() {
+    //time = -1 * (Number(this.value) - 200);
+  }
+  document.getElementById("green").oninput = function() {
+    //time = -1 * (Number(this.value) - 200);
+  }
+  document.getElementById("blue").oninput = function() {
+    //time = -1 * (Number(this.value) - 200);
   }
 
   let personOn = true;
