@@ -21,3 +21,27 @@ function patternType(pattern) {
     }
   }
 }
+
+// how many balls are in the pattern
+function numberOfBalls(pattern) {
+  if (type == "norm") {
+    // total number of all numbers in pattern added
+    let total = 0;
+    for (let i = 0; i < pattern.length; i++) {
+      total = total + Number(pattern[i]);
+    }
+    ballNumber = total / pattern.length;
+  } else if (type == "sync") {
+    // total of all numbers added
+    let total = 0;
+    for (let i = 0; i < pattern.length; i++) {
+      if (pattern[i] != "(" && pattern[i] != ")" && pattern[i].toUpperCase() != "X") {
+        
+      }
+    }
+  } else if (type == "mult") {
+    
+  } else if (type == "both") {
+    
+  }
+}
