@@ -24,16 +24,6 @@ function animateNorm(pattern) {
   // next the next color
   let nextColor = 0;
 
-  ballColor[0] = `rgb(${0}, ${0}, ${255})`;
-  ballColor[1] = `rgb(${0}, ${255}, ${0})`;
-  ballColor[2] = `rgb(${255}, ${0}, ${0})`;
-  ballColor[3] = `rgb(${255}, ${255}, ${0})`;
-  ballColor[4] = `rgb(${0}, ${255}, ${255})`;
-  ballColor[5] = `rgb(${255}, ${0}, ${255})`;
-  ballColor[6] = `rgb(${255}, ${130}, ${0})`;
-  ballColor[7] = `rgb(${200}, ${0}, ${255})`;
-  ballColor[8] = `rgb(${150}, ${200}, ${0})`;
-
   // animate
   patternInterval = setInterval(moveNorm, 2);
   function moveNorm() {
@@ -72,13 +62,12 @@ function animateNorm(pattern) {
             yChange[i] = (toss * 2) - 1;
 
             // the color of this ball
-            if (ballColor.length - 1 == nextColor) {
+            if (ballNumber - 1 == nextColor) {
               nextColor = 0;
             } else {
               nextColor++;
             }
-            colorOfBall[i] = ballColor[0];
-            //colorOfBall[i] = `rgb(${100}, ${100}, ${100})`;
+            colorOfBall[i] = ballColor[nextColor];
           }
 
           // flip durection
