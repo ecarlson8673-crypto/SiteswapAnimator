@@ -103,6 +103,13 @@
     if (multiColored == false) {
       multiColored = true;
       document.getElementById("ballColor").innerHTML = "Single Colored";
+      // randomize colors
+      for (let i = 0; i < ballNumber; i++) {
+        let r = Math.random() * 150;
+        let g = Math.random() * 150;
+        let b = Math.random() * 150;
+        ballColor[i] = `rgb(${r}, ${g}, ${b})`;
+      }
     } else if (multiColored == true) {
       multiColored = false;
       document.getElementById("ballColor").innerHTML = "Multicolored";
