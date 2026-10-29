@@ -17,7 +17,8 @@ function person() {
     armPosition1 = 1;
     armPosition2 = 1;
   }
-  setInterval(movePerson, 2);
+  
+  personInterval = setInterval(movePerson, 2);
   function movePerson() {
     let currentTime = new Date().getTime();
     if (startTime + (time) < currentTime) {
