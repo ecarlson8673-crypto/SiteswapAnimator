@@ -67,7 +67,8 @@ function animateNorm(pattern) {
             } else {
               nextColor++;
             }
-            colorOfBall[i] = ballColor[nextColor];
+            //colorOfBall[i] = ballColor[nextColor];
+            colorOfBall[i] = `rgb(${100}, ${100}, ${100})`;
           }
 
           // flip durection
