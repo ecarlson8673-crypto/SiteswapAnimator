@@ -18,6 +18,7 @@ function validSync(pattern) {
       // if the number is odd pattern is not posible
       if (number % 2 != 0) {
         document.getElementById("errorMessage").innerHTML = "There can be no odd numbers in synchronous patterns.";
+        valid = false;
         return;
       }
       if (pattern.length - 2 >= position) {
