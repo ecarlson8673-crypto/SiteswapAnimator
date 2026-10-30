@@ -132,7 +132,7 @@
 
   // make it rain for the hell of it
   // create rain
-  let rainNumber = 100;
+  let rainNumber = 200;
   let dropSpeed = [];
   let dropY = [];
   document.getElementById("rainContainer").style.display = "none";
@@ -166,6 +166,7 @@
             drop.style.top = `${0}px`;
             let left = Math.random() * window.innerWidth;
             drop.style.left = `${left}px`;
+            dropY[i] = 0;
           } else {
             dropY[i] = dropY[i] + dropSpeed[i];
             drop.style.top = `${dropY[i]}px`;
