@@ -19,10 +19,20 @@
     document.getElementById("arm1").setAttribute("y2", `${250}`);
     document.getElementById("arm2").setAttribute("x2", `${295}`);
     document.getElementById("arm2").setAttribute("y2", `${250}`);
+
+    document.getElementById("arm1").setAttribute("x1", `${100}`);
+    document.getElementById("arm1").setAttribute("y1", `${230}`);
+    document.getElementById("arm2").setAttribute("x1", `${300}`);
+    document.getElementById("arm2").setAttribute("y1", `${230}`);
+
+    document.getElementById("upperArm1").setAttribute("x2", `${100}`);
+    document.getElementById("upperArm1").setAttribute("y2", `${230}`);
+    document.getElementById("upperArm2").setAttribute("x2", `${300}`);
+    document.getElementById("upperArm2").setAttribute("y2", `${230}`);
     // reset intervals
     clearInterval(patternInterval);
     clearInterval(personInterval);
     // reset error message text
-    document.getElementById("errorMessage").innerHMTL = "";
+    document.getElementById("errorMessage").innerHTML = "";
   }
 }
