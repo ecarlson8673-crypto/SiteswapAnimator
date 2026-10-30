@@ -134,6 +134,7 @@
   // create rain
   let rainNumber = 100;
   let speed = [];
+  let y = [];
   document.getElementById("rainContainer").style.display = "none";
   for (let i = 0; i < rainNumber; i++) {
     const div = document.createElement("div");
