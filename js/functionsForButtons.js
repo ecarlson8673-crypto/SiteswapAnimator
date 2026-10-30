@@ -171,7 +171,7 @@
         let left = Math.random() * window.innerWidth;
         drop.style.left = `${left}px`;
       } else {
-        drop.style.bottom = `${bottom - speed[i]}`;
+        drop.style.bottom = `${bottom - speed[i]}px`;
       }
     }
   }
