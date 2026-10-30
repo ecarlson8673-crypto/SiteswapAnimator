@@ -134,7 +134,7 @@
   // create rain
   let rainNumber = 100;
   let speed = [];
-  let y = [];
+  let dropY = [];
   document.getElementById("rainContainer").style.display = "none";
   for (let i = 0; i < rainNumber; i++) {
     const div = document.createElement("div");
@@ -145,8 +145,8 @@
     let g = (Math.random() * 45) + 100;
     div.style.backgroundColor = `rgba(${0}, ${g}, ${175}, ${0.25})`;
     document.getElementById("rainContainer").appendChild(div);
-    speed[i] = (Math.random() * 10) + 5;
-    y[i] = window.innerHeight;
+    dropSpeed[i] = (Math.random() * 10) + 5;
+    dropY[i] = 0;
   }
   let rainOn = false;
   let rainInterval;
@@ -158,13 +158,13 @@
       function moveRain() {
         for (let i = 0; i < rainNumber; i++) {
           let drop = document.getElementById(`drop${i}`);
-          /*if (y[i] - speed[i] < 0) {
+          /*if (y[i] - dropSpeed[i] < 0) {
             drop.style.top = `${0}px`;
             let left = Math.random() * window.innerWidth;
             drop.style.left = `${left}px`;
           } else {*/
-            y[i] = y[i] - 10;
-            drop.style.bottom = `${y[i]}px`;
+            dropY[i] = dropY[i] + 10;
+            drop.style.top = `${dropY[i]}px`;
           //}
         }
       }
