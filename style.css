@@ -108,3 +108,15 @@ button {
   top: 0px;
   width: 10px;
 }
+#patternStat {
+  position: fixed;
+  top: 50px;
+}
+#ballNumberStat {
+  position: fixed;
+  top: 60px;
+}
+#typeStat {
+  position: fixed;
+  top: 70px;
+}
