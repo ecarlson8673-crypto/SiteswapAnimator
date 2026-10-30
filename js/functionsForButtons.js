@@ -166,13 +166,13 @@
     for (let i = 0; i < rainNumber; i++) {
       let drop = document.getElementById(`rain${i}`);
       let bottom = drop.getBoundingClientRect().bottom;
-      if (bottom - speed[i] < 0) {
+      /*if (bottom - speed[i] < 0) {
         drop.style.top = `${0}px`;
         let left = Math.random() * window.innerWidth;
         drop.style.left = `${left}px`;
-      } else {
+      } else {*/
         drop.style.bottom = `${bottom - speed[i]}px`;
-      }
+      //}
     }
   }
 }
