@@ -110,16 +110,16 @@ button {
 }
 #patternStat {
   position: fixed;
-  top: 65px;
+  top: 75px;
   font-size: 15px;
 }
 #ballNumberStat {
   position: fixed;
-  top: 80px;
+  top: 90px;
   font-size: 15px;
 }
 #typeStat {
   position: fixed;
-  top: 95px;
+  top: 105px;
   font-size: 15px;
 }
