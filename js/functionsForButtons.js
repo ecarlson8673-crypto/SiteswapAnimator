@@ -152,11 +152,11 @@
     if (rainOn == false) {
       rainOn = true;
       rainInterval = setInterval(moveRain, 100);
-      document.getElementById("rain").innerHTML = "Rain On";
+      document.getElementById("rainButton").innerHTML = "Rain On";
     } else if (rainOn == true) {
       rainOn = false;
       clearInterval(rainInterval);
-      document.getElementById("rain").innerHTML = "Rain Off";
+      document.getElementById("rainButton").innerHTML = "Rain Off";
     }
   }
 
