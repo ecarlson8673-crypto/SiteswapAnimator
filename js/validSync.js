@@ -7,6 +7,7 @@ function validSync(pattern) {
       numberOfNumbers = 0;
     } else if (pattern[i] == ")") {
       if (numberOfNumbers != 2) {
+        document.getElementById("errorMessage").innerHTML = "There must two numbers inside the parentheses.";
         valid = false;
         return;
       }
