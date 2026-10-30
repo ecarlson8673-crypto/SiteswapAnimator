@@ -153,14 +153,14 @@
     dropY[i] = 0;
   }
   // add clouds
-  let cloudNumber = 20;
+  let cloudNumber = 40;
   let cloudSpeed = [];
   let cloudX = [];
   for (let i = 0; i < cloudNumber; i++) {
     let div = document.createElement("div");
     div.id = `cloud${i}`;
     // style cloud
-    let width = (Math.random() * 20) + 60;
+    let width = (Math.random() * 60) + 20;
     div.style.width = `${width}px`;
     let height = (Math.random() * 30) + 10;
     div.style.height = `${height}px`;
@@ -202,6 +202,7 @@
             let top = Math.random() * 10;
             cloud.style.top = `${top}px`;
             cloudX[i] = 0;
+            cloudSpeed[i] = (Math.random() * 5) + 1;
           } else {
             cloudX[i] = cloudX[i] + cloudSpeed[i];
             cloud.style.left = `${cloudX[i]}px`;
