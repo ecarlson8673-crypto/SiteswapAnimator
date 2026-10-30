@@ -1,5 +1,20 @@
 // check if a syncronous pattern is valid
 function validSync(pattern) {
+  // check if there is not 2 numbers in all paretheses
+  let numberOfNumbers = 0;
+  for (let i = 0; i < pattern.length; i++) {
+    if (pattern[i] == "(") {
+      numberOfNumbers = 0;
+    } else if (pattern[i] == ")") {
+      if (numberOfNumbers != 2) {
+        valid = false;
+        return;
+      }
+    } else if (pattern[i] != "," || pattern[i].toUpperCase() != "X") {
+      numberOfNumbers++;
+    }
+  }
+
   // remove all uncessary stuff from siteswap
   pattern = pattern.replaceAll("(", "").replaceAll(")", "").replaceAll(",", "");
 
