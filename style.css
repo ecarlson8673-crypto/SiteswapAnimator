@@ -103,3 +103,7 @@ button {
   width: 300px;
   height: 100px;
 }
+.rain {
+  position: fixed;
+  width: 10px;
+}
