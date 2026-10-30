@@ -134,6 +134,7 @@
   // create rain
   let rainNumber = 100;
   let speed = [];
+  document.getElementById("rainContainer").style.display = "none";
   for (let i = 0; i < rainNumber; i++) {
     const div = document.createElement("div");
     div.classList.add("rain");
@@ -141,7 +142,7 @@
     div.style.left = `${Math.random() * window.innerWidth}px`;
     div.style.height = `${Math.random() * 20}px`;
     let g = (Math.random() * 45) + 100;
-    div.style.backgroundColor = `rgb(${0}, ${g}, ${175})`;
+    div.style.backgroundColor = `rgba(${0}, ${g}, ${175}, ${0.25})`;
     document.getElementById("rainContainer").appendChild(div);
     speed[i] = (Math.random() * 10) + 5;
   }
@@ -151,25 +152,26 @@
     if (rainOn == false) {
       rainOn = true;
       rainInterval = setInterval(moveRain, 100);
-      document.getElementById("rainButton").innerHTML = "Rain On";
+      document.getElementById("rainButton").innerHTML = "Rain Off";
+      document.getElementById("rainContainer").style.display = "";
     } else if (rainOn == true) {
       rainOn = false;
       clearInterval(rainInterval);
-      document.getElementById("rainButton").innerHTML = "Rain Off";
+      document.getElementById("rainButton").innerHTML = "Rain On";
+      document.getElementById("rainContainer").style.display = "none";
     }
   }
 
   function moveRain() {
     for (let i = 0; i < rainNumber; i++) {
       let drop = document.getElementById(`rain${i}`);
-      let top = drop.getBoundingClientRect().top;
       let bottom = drop.getBoundingClientRect().bottom;
       if (bottom - speed[i] < 0) {
         drop.style.top = `${0}px`;
         let left = Math.random() * window.innerWidth;
         drop.style.left = `${left}px`;
       } else {
-        drop.style.top = `${top + speed[i]}`;
+        drop.style.bottom = `${bottom - speed[i]}`;
       }
     }
   }
