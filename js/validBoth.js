@@ -108,7 +108,7 @@ function validBoth(pattern) {
       hand.splice(i, 1);
     }
   }
-
+let test = predictHand + "<br><br>" + hand;
   // compare predicted from actual to see if pattern is posible
   for (let i = 0; i < predictHand.length; i++) {
     let RActual = 0;
@@ -137,6 +137,7 @@ function validBoth(pattern) {
 
   // tell user pattern is not valid
   if (valid == false) {
-    document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
+    //document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
+    document.getElementById("errorMessage").innerHTML = test;
   }
 }
