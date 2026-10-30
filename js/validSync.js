@@ -11,7 +11,7 @@ function validSync(pattern) {
         valid = false;
         return;
       }
-    } else if (pattern[i] != "," || pattern[i].toUpperCase() != "X") {
+    } else if (pattern[i] != "," && pattern[i].toUpperCase() != "X") {
       numberOfNumbers++;
     }
   }
