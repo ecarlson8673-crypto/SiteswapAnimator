@@ -144,13 +144,34 @@
     div.id = `drop${i}`;
     div.style.left = `${Math.random() * window.innerWidth}px`;
     div.style.height = `${(Math.random() * 10) + 10}px`;
-    let g = (Math.random() * 45) + 100;
+    let g = (Math.random() * 200);
     div.style.backgroundColor = `rgba(${0}, ${g}, ${175}, ${0.25})`;
     // add it to a container
     document.getElementById("rainContainer").appendChild(div);
     // set up vaiables for positioning it
     dropSpeed[i] = (Math.random() * 10) + 5;
     dropY[i] = 0;
+  }
+  // add clouds
+  let cloudNumber = 20;
+  let cloudSpeed = [];
+  let cloudX = [];
+  for (let i = 0; i < cloudNumber; i++) {
+    let div = document.createElement("div");
+    div.id = `cloud${i}`;
+    // style cloud
+    let width = (Math.random() * 20) + 10;
+    div.style.width = `${width}px`;
+    let height = (Math.random() * 10) + 10;
+    div.style.height = `${height}px`;
+    div.style.position = "fixed";
+    div.style.left = `${0}px`;
+    let top = Math.random() * 10;
+    div.style.top = `${top}px`;
+    // add element to container
+    document.getElementById("rainContainer").appendChild(div);
+    cloudSpeed[i] = (Math.random() * 5) + 5;
+    cloudX[i] = 0;
   }
   let rainOn = false;
   let rainInterval;
@@ -170,6 +191,18 @@
           } else {
             dropY[i] = dropY[i] + dropSpeed[i];
             drop.style.top = `${dropY[i]}px`;
+          }
+        }
+        for (let i = 0; i < cloudNumber; i++) {
+          let cloud = document.getElementById(`cloud${i}`);
+          if (cloudX[i] + cloudSpeed[i] > window.innerWidth) {
+            cloud.style.left = `${0}px`;
+            let top = Math.random() * 10;
+            cloud.style.top = `${top}px`;
+            cloudX[i] = 0;
+          } else {
+            cloudX[i] = cloudX[i] + cloudSpeed[i];
+            cloud.style.left = `${cloudX[i]}px`;
           }
         }
       }
