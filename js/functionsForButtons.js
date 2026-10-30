@@ -146,6 +146,7 @@
     div.style.backgroundColor = `rgba(${0}, ${g}, ${175}, ${0.25})`;
     document.getElementById("rainContainer").appendChild(div);
     speed[i] = (Math.random() * 10) + 5;
+    y[i] = window.innerHeight;
   }
   let rainOn = false;
   let rainInterval;
@@ -163,7 +164,8 @@
             let left = Math.random() * window.innerWidth;
             drop.style.left = `${left}px`;
           } else {*/
-            drop.style.bottom = `${bottom - 10}px`;
+            y[i] = y[i] - 10;
+            drop.style.bottom = `${y[i]}px`;
           //}
         }
       }
