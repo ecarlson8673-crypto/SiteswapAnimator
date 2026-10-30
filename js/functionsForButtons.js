@@ -143,7 +143,7 @@
     div.classList.add("rain");
     div.id = `drop${i}`;
     div.style.left = `${Math.random() * window.innerWidth}px`;
-    div.style.height = `${Math.random() * 20}px`;
+    div.style.height = `${(Math.random() * 10) + 10}px`;
     let g = (Math.random() * 45) + 100;
     div.style.backgroundColor = `rgba(${0}, ${g}, ${175}, ${0.25})`;
     // add it to a container
@@ -158,18 +158,18 @@
     if (rainOn == false) {
       rainOn = true;
 
-      rainInterval = setInterval(moveRain, 250);
+      rainInterval = setInterval(moveRain, 100);
       function moveRain() {
         for (let i = 0; i < rainNumber; i++) {
           let drop = document.getElementById(`drop${i}`);
-          /*if (y[i] - dropSpeed[i] < 0) {
+          if (dropY[i] + dropSpeed[i] < window.innerHeight) {
             drop.style.top = `${0}px`;
             let left = Math.random() * window.innerWidth;
             drop.style.left = `${left}px`;
-          } else {*/
-            dropY[i] = dropY[i] + 10;
+          } else {
+            dropY[i] = dropY[i] + dropSpeed[i];
             drop.style.top = `${dropY[i]}px`;
-          //}
+          }
         }
       }
       document.getElementById("rainButton").innerHTML = "Rain Off";
