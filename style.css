@@ -108,18 +108,23 @@ button {
   top: 0px;
   width: 10px;
 }
+#titleStat {
+  position: fixed;
+  top: 80px;
+  font-size: 20px;
+}
 #patternStat {
   position: fixed;
-  top: 75px;
+  top: 100px;
   font-size: 15px;
 }
 #ballNumberStat {
   position: fixed;
-  top: 90px;
+  top: 115px;
   font-size: 15px;
 }
 #typeStat {
   position: fixed;
-  top: 105px;
+  top: 130px;
   font-size: 15px;
 }
