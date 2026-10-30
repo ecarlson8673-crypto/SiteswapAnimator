@@ -152,29 +152,6 @@
     dropSpeed[i] = (Math.random() * 10) + 5;
     dropY[i] = 0;
   }
-  // add clouds
-  let cloudNumber = 40;
-  let cloudSpeed = [];
-  let cloudX = [];
-  for (let i = 0; i < cloudNumber; i++) {
-    let div = document.createElement("div");
-    div.id = `cloud${i}`;
-    // style cloud
-    let width = (Math.random() * 60) + 20;
-    div.style.width = `${width}px`;
-    let height = (Math.random() * 30) + 10;
-    div.style.height = `${height}px`;
-    div.style.position = "fixed";
-    div.style.left = `${0}px`;
-    let top = Math.random() * 20;
-    div.style.top = `${top}px`;
-    let a = (Math.random() * 0.25) + 0.5;
-    div.style.backgroundColor = `rgba(${0}, ${0}, ${0}, ${a})`;
-    // add element to container
-    document.getElementById("rainContainer").appendChild(div);
-    cloudSpeed[i] = (Math.random() * 5) + 1;
-    cloudX[i] = 0;
-  }
   let rainOn = false;
   let rainInterval;
   function rain() {
@@ -193,19 +170,6 @@
           } else {
             dropY[i] = dropY[i] + dropSpeed[i];
             drop.style.top = `${dropY[i]}px`;
-          }
-        }
-        for (let i = 0; i < cloudNumber; i++) {
-          let cloud = document.getElementById(`cloud${i}`);
-          if (cloudX[i] + cloudSpeed[i] > window.innerWidth) {
-            cloud.style.left = `${0}px`;
-            let top = Math.random() * 10;
-            cloud.style.top = `${top}px`;
-            cloudX[i] = 0;
-            cloudSpeed[i] = (Math.random() * 5) + 1;
-          } else {
-            cloudX[i] = cloudX[i] + cloudSpeed[i];
-            cloud.style.left = `${cloudX[i]}px`;
           }
         }
       }
