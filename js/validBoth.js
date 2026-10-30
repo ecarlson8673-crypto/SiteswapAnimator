@@ -1,5 +1,10 @@
 // check if a synchronous multiplex pattern is valid
 function validBoth(pattern) {
+  if (pattern.search(",") == -1) {
+    document.getElementById("errorMessage").innerHTML = "Synchronous multiplex patterns must have a comma separating the two parts of the pattern in the parentheses.";
+    valid = false;
+    return;
+  }
   // split pattern to make it easier to test it
   pattern = pattern.replaceAll(")", "").replaceAll("[", "").replaceAll("]", "");
   pattern = pattern.split("(");
@@ -137,7 +142,6 @@ function validBoth(pattern) {
 
   // tell user pattern is not valid
   if (valid == false) {
-    //document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
-    document.getElementById("temporaryMessage").innerHTML = predictHand + "<br><br>" + hand;;
+    document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
   }
 }
