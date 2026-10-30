@@ -219,16 +219,22 @@
       }
 
       // tell the user stats about pattern
-      document.getElementById("patternStat").innerHTML = document.getElementById("pattern").value;
-      document.getElementById("ballNumberStat").innerHTML = ballNumber + " ball pattern";
-      if (type == "norm") {
-        document.getElementById("typeStat").innerHTML = "normal pattern";
-      } else if (type == "mult") {
-        document.getElementById("typeStat").innerHTML = "multiplex pattern";
-      } else if (type == "sync") {
-        document.getElementById("typeStat").innerHTML = "synchronous pattern";
-      } else if (type == "both") {
-        document.getElementById("typeStat").innerHTML = "synchronous multiplex pattern";
+      if (valid == true) {
+        document.getElementById("patternStat").innerHTML = document.getElementById("pattern").value;
+        document.getElementById("ballNumberStat").innerHTML = ballNumber + " ball pattern";
+        if (type == "norm") {
+          document.getElementById("typeStat").innerHTML = "normal pattern";
+        } else if (type == "mult") {
+          document.getElementById("typeStat").innerHTML = "multiplex pattern";
+        } else if (type == "sync") {
+          document.getElementById("typeStat").innerHTML = "synchronous pattern";
+        } else if (type == "both") {
+          document.getElementById("typeStat").innerHTML = "synchronous multiplex pattern";
+        }
+      } else {
+        document.getElementById("patternStat").innerHTML = "";
+        document.getElementById("ballNumberStat").innerHTML = "";
+        document.getElementById("typeStat").innerHTML = "";
       }
     }
   </script>
