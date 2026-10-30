@@ -158,8 +158,7 @@
       function moveRain() {
         for (let i = 0; i < rainNumber; i++) {
           let drop = document.getElementById(`drop${i}`);
-          let bottom = drop.getBoundingClientRect().bottom;
-          /*if (bottom - speed[i] < 0) {
+          /*if (y[i] - speed[i] < 0) {
             drop.style.top = `${0}px`;
             let left = Math.random() * window.innerWidth;
             drop.style.left = `${left}px`;
