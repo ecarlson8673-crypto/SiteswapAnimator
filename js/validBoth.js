@@ -110,7 +110,7 @@ function validBoth(pattern) {
   }
 
   // compare predicted from actual to see if pattern is posible
-  for (let i = 0; i < predictHand.length - (predictHand.length / 10); i++) {
+  for (let i = 0; i < predictHand.length; i++) {
     let RActual = 0;
     let LActual = 0;
     let RPredict = 0;
@@ -123,9 +123,9 @@ function validBoth(pattern) {
         LPredict++;
       }
       // number of R and L in actual
-      if (hand[i + (pattern.length * 2)][j] == "R") {
+      if (hand[i + (pattern.length * 4)][j] == "R") {
         RActual++;
-      } else if (hand[i + (pattern.length * 2)][j] == "L") {
+      } else if (hand[i + (pattern.length * 4)][j] == "L") {
         LActual++;
       }
     }
@@ -138,6 +138,6 @@ function validBoth(pattern) {
   // tell user pattern is not valid
   if (valid == false) {
     //document.getElementById("errorMessage").innerHTML = "Sorry, this pattern is not possible.";
-    document.getElementById("errorMessage").innerHTML = predictHand + "<br><br>" + hand;;
+    document.getElementById("temporaryMessage").innerHTML = predictHand + "<br><br>" + hand;;
   }
 }
