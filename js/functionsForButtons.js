@@ -133,18 +133,22 @@
   // make it rain for the hell of it
   // create rain
   let rainNumber = 100;
-  let speed = [];
+  let dropSpeed = [];
   let dropY = [];
   document.getElementById("rainContainer").style.display = "none";
   for (let i = 0; i < rainNumber; i++) {
+    // create a element
     const div = document.createElement("div");
+    // style it
     div.classList.add("rain");
     div.id = `drop${i}`;
     div.style.left = `${Math.random() * window.innerWidth}px`;
     div.style.height = `${Math.random() * 20}px`;
     let g = (Math.random() * 45) + 100;
     div.style.backgroundColor = `rgba(${0}, ${g}, ${175}, ${0.25})`;
+    // add it to a container
     document.getElementById("rainContainer").appendChild(div);
+    // set up vaiables for positioning it
     dropSpeed[i] = (Math.random() * 10) + 5;
     dropY[i] = 0;
   }
