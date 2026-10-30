@@ -56,6 +56,8 @@ function validBoth(pattern) {
         // check if toss is odd
         if (toss % 2 != 0) {
           document.getElementById("errorMessage").innerHTML = "There can be no odd numbers in a synchronous multiplex pattern.";
+          valid = false;
+          return;
         }
         // check if ball is crossing
         let crossing = false;
