@@ -168,6 +168,8 @@
     div.style.left = `${0}px`;
     let top = Math.random() * 10;
     div.style.top = `${top}px`;
+    let a = (Math.random() * 0.25) + 0.5;
+    div.style.backgroundColor = `rgba(${0}, ${0}, ${0}, ${})`
     // add element to container
     document.getElementById("rainContainer").appendChild(div);
     cloudSpeed[i] = (Math.random() * 5) + 5;
