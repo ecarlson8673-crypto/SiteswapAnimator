@@ -45,9 +45,9 @@ function person() {
         document.getElementById("arm1").setAttribute("x2", `${135}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
 
-        document.getElementById("upperArm1").setAttribute("x2", `${90}`);
+        document.getElementById("upperArm1").setAttribute("x2", `${95}`);
         document.getElementById("upperArm1").setAttribute("y2", `${225}`);
-        document.getElementById("arm1").setAttribute("x1", `${90}`);
+        document.getElementById("arm1").setAttribute("x1", `${95}`);
         document.getElementById("arm1").setAttribute("y1", `${225}`);
       } else if (armPosition1 == 4) {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
@@ -82,9 +82,9 @@ function person() {
         document.getElementById("arm2").setAttribute("x2", `${265}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
 
-        document.getElementById("upperArm2").setAttribute("x2", `${310}`);
+        document.getElementById("upperArm2").setAttribute("x2", `${305}`);
         document.getElementById("upperArm2").setAttribute("y2", `${225}`);
-        document.getElementById("arm2").setAttribute("x1", `${310}`);
+        document.getElementById("arm2").setAttribute("x1", `${305}`);
         document.getElementById("arm2").setAttribute("y1", `${225}`);
       } else if (armPosition2 == 4) {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
