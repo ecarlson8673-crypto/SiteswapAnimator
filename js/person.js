@@ -28,9 +28,19 @@ function person() {
       if (armPosition1 == 0 || armPosition1 == 6) {
         document.getElementById("arm1").setAttribute("x2", `${70}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
+
+        document.getElementById("upperArm1").setAttribute("x2", `${110}`);
+        document.getElementById("upperArm1").setAttribute("y2", `${225}`);
+        document.getElementById("arm1").setAttribute("x1", `${110}`);
+        document.getElementById("arm1").setAttribute("y1", `${225}`);
       } else if (armPosition1 == 1) {
         document.getElementById("arm1").setAttribute("x2", `${105}`);
         document.getElementById("arm1").setAttribute("y2", `${265}`);
+
+        document.getElementById("upperArm1").setAttribute("x2", `${100}`);
+        document.getElementById("upperArm1").setAttribute("y2", `${230}`);
+        document.getElementById("arm1").setAttribute("x1", `${100}`);
+        document.getElementById("arm1").setAttribute("y1", `${230}`);
       } else if (armPosition1 == 2) {
         document.getElementById("arm1").setAttribute("x2", `${135}`);
         document.getElementById("arm1").setAttribute("y2", `${250}`);
@@ -55,9 +65,19 @@ function person() {
       if (armPosition2 == 0 || armPosition2 == 6) {
         document.getElementById("arm2").setAttribute("x2", `${330}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
+
+        document.getElementById("upperArm2").setAttribute("x2", `${290}`);
+        document.getElementById("upperArm2").setAttribute("y2", `${225}`);
+        document.getElementById("arm2").setAttribute("x1", `${290}`);
+        document.getElementById("arm2").setAttribute("y1", `${225}`);
       } else if (armPosition2 == 1) {
         document.getElementById("arm2").setAttribute("x2", `${295}`);
         document.getElementById("arm2").setAttribute("y2", `${265}`);
+
+        document.getElementById("upperArm2").setAttribute("x2", `${300}`);
+        document.getElementById("upperArm2").setAttribute("y2", `${230}`);
+        document.getElementById("arm2").setAttribute("x1", `${300}`);
+        document.getElementById("arm2").setAttribute("y1", `${230}`);
       } else if (armPosition2 == 2) {
         document.getElementById("arm2").setAttribute("x2", `${265}`);
         document.getElementById("arm2").setAttribute("y2", `${250}`);
