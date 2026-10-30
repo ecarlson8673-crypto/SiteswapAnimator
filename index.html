@@ -221,16 +221,16 @@
 
       // tell the user stats about pattern
       if (valid == true) {
-        document.getElementById("patternStat").innerHTML = document.getElementById("pattern").value;
-        document.getElementById("ballNumberStat").innerHTML = ballNumber + " ball pattern";
+        document.getElementById("patternStat").innerHTML = "Pattern: " + document.getElementById("pattern").value;
+        document.getElementById("ballNumberStat").innerHTML = ballNumber + " Ball Pattern";
         if (type == "norm") {
-          document.getElementById("typeStat").innerHTML = "normal pattern";
+          document.getElementById("typeStat").innerHTML = "Normal Pattern";
         } else if (type == "mult") {
-          document.getElementById("typeStat").innerHTML = "multiplex pattern";
+          document.getElementById("typeStat").innerHTML = "Multiplex Pattern";
         } else if (type == "sync") {
-          document.getElementById("typeStat").innerHTML = "synchronous pattern";
+          document.getElementById("typeStat").innerHTML = "Synchronous Pattern";
         } else if (type == "both") {
-          document.getElementById("typeStat").innerHTML = "synchronous multiplex pattern";
+          document.getElementById("typeStat").innerHTML = "Synchronous Multiplex Pattern";
         }
       } else {
         document.getElementById("patternStat").innerHTML = "";
