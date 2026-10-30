@@ -129,4 +129,47 @@
       document.getElementById("svgContainer").style.display = "";
     }
   }
+
+  // make it rain for the hell of it
+  // create rain
+  let rainNumber = 100;
+  let speed = [];
+  let color = [];
+  for (let i = 0; i < rainNumber; i++) {
+    const div = document.createElement("div");
+    div.classList.add("rain");
+    div.id = `rain${i}`;
+    div.style.left = `${Math.random() * window.innerWidth}px`;
+    div.style.height = `${Math.random() * 20}px`;
+    document.getElementById("rainContainer").appendChild(div);
+    speed[i] = (Math.random() * 10) + 5;
+    let g = (Math.random() * 45) + 100;
+    color[i] = `rgb(${0}, ${g}, ${175})`;
+  }
+  let rainOn = false;
+  let rainInterval;
+  function rain() {
+    if (rainOn == false) {
+      rainOn = true;
+      rainInterval = setInterval(moveRain, 100);
+    } else if (rainOn == true) {
+      rainOn = false;
+      clearInterval(rainInterval);
+    }
+  }
+
+  function moveRain() {
+    for (let i = 0; i < rainNumber; i++) {
+      let drop = document.getElementById(`rain${i}`);
+      let top = drop.getBoundingClientRect().top;
+      let bottom = drop.getBoundingClientRect().bottom;
+      if (bottom - speed < 0) {
+        drop.style.top = `${0}px`;
+        let left = Math.random() * window.innerWidth;
+        drop.style.left = `${left}px`;
+      } else {
+        drop.style.top = `${top + speed[i]}`;
+      }
+    }
+  }
 }
