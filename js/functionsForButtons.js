@@ -88,7 +88,7 @@
       // reset buttons
       document.getElementById("ideas").style.display = "";
       document.getElementById("explanation").style.display = "";
-      document.getElementById("settings").innerHTML = "Settings";
+      document.getElementById("settings").innerHTML = "Options";
     }
   }
 
