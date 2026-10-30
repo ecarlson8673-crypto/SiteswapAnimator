@@ -121,11 +121,11 @@
   function personVisibility() {
     if (personOn == true) {
       personOn = false;
-      document.getElementById("personVisibility").innerHTML = "Show person";
+      document.getElementById("personVisibility").innerHTML = "Show Person";
       document.getElementById("svgContainer").style.display = "none";
     } else if (personOn == false) {
       personOn = true;
-      document.getElementById("personVisibility").innerHTML = "Hide person";
+      document.getElementById("personVisibility").innerHTML = "Hide Person";
       document.getElementById("svgContainer").style.display = "";
     }
   }
@@ -152,9 +152,11 @@
     if (rainOn == false) {
       rainOn = true;
       rainInterval = setInterval(moveRain, 100);
+      document.getElementById("rain").innerHTML = "Rain On";
     } else if (rainOn == true) {
       rainOn = false;
       clearInterval(rainInterval);
+      document.getElementById("rain").innerHTML = "Rain Off";
     }
   }
 
