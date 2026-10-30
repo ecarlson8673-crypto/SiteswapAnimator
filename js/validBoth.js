@@ -110,7 +110,7 @@ function validBoth(pattern) {
   }
 
   // compare predicted from actual to see if pattern is posible
-  for (let i = 0; i < predictHand.length; i++) {
+  for (let i = 0; i < predictHand.length - (predictHand.length / 10); i++) {
     let RActual = 0;
     let LActual = 0;
     let RPredict = 0;
