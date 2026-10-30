@@ -160,19 +160,19 @@
     let div = document.createElement("div");
     div.id = `cloud${i}`;
     // style cloud
-    let width = (Math.random() * 20) + 10;
+    let width = (Math.random() * 20) + 60;
     div.style.width = `${width}px`;
-    let height = (Math.random() * 10) + 10;
+    let height = (Math.random() * 30) + 10;
     div.style.height = `${height}px`;
     div.style.position = "fixed";
     div.style.left = `${0}px`;
-    let top = Math.random() * 10;
+    let top = Math.random() * 20;
     div.style.top = `${top}px`;
     let a = (Math.random() * 0.25) + 0.5;
     div.style.backgroundColor = `rgba(${0}, ${0}, ${0}, ${a})`;
     // add element to container
     document.getElementById("rainContainer").appendChild(div);
-    cloudSpeed[i] = (Math.random() * 5) + 5;
+    cloudSpeed[i] = (Math.random() * 5) + 1;
     cloudX[i] = 0;
   }
   let rainOn = false;
