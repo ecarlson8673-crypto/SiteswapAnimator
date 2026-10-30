@@ -162,7 +162,7 @@
             let left = Math.random() * window.innerWidth;
             drop.style.left = `${left}px`;
           } else {*/
-            drop.style.bottom = `${bottom - speed[i]}px`;
+            drop.style.bottom = `${bottom - 10}px`;
           //}
         }
       }
