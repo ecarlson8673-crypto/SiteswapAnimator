@@ -151,7 +151,7 @@
   function rain() {
     if (rainOn == false) {
       rainOn = true;
-      rainInterval = setInterval(moveRain, 100);
+      rainInterval = setInterval(moveRain, 250);
       document.getElementById("rainButton").innerHTML = "Rain Off";
       document.getElementById("rainContainer").style.display = "";
     } else if (rainOn == true) {
