@@ -38,7 +38,7 @@ function numberOfBalls(pattern) {
     //length of numbers
     let length = 0;
     for (let i = 0; i < pattern.length; i++) {
-      if (pattern[i] != "(" && pattern[i] != ")" && pattern[i].toUpperCase() != "X") {
+      if (pattern[i] != "(" && pattern[i] != ")" && pattern[i].toUpperCase() != "X" && pattern[i] != ",") {
         total = total + Number(pattern[i]);
         length++;
       }
